@@ -31,15 +31,15 @@ div{
     background-color: #b9e19c;
 }
 
-.header{
+header{
     background-color: #0f5a16;
 }
 
-.main{
+nav{
     background-color: #b9e19c;
 }
 
-.footer{
+footer{
     background-color: #0f5a16;
 }
 
@@ -56,10 +56,15 @@ div.galery{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: #0f5a16 2px solid;
+    border: #0f5a16 4px solid;
+}
+
+img{
+    border: 2px solid #ecefdc;
 }
 
 img.logo{
     width: 20px;
     height: 20px;
+    border: 0px;
 }
