@@ -1,0 +1,65 @@
+p{
+    color: darkgray;
+    font: 14px roboto;
+    text-align: center;
+    justify-content: center;
+    margin: 5%;
+
+    /*comment*/
+}
+
+h1{
+    color: black;
+    font: 14px roboto;
+    text-align: center;
+    justify-content: center;
+    margin: 5%;
+}
+
+div{
+    background-color: bisque;
+    text-align: center;
+    margin: 10%;
+    padding: 5%;
+}
+
+.color1{
+    background-color: #0f5a16;
+}
+
+.color2{
+    background-color: #b9e19c;
+}
+
+.header{
+    background-color: #0f5a16;
+}
+
+.main{
+    background-color: #b9e19c;
+}
+
+.footer{
+    background-color: #0f5a16;
+}
+
+div.galery>img{
+    width: 30%;
+    height: 30%;
+}
+
+a:visited{
+    color: rgb(215, 174, 9);
+}
+
+div.galery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: #0f5a16 2px solid;
+}
+
+img.logo{
+    width: 20px;
+    height: 20px;
+}
