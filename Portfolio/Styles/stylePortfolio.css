@@ -1,11 +1,9 @@
 p{
     color: darkgray;
-    font: 14px roboto;
+    font: 14px roboto, sans-serif; /*colocal sans-serif no final caso não exista a font que queremos*/
     text-align: center;
     justify-content: center;
     margin: 5%;
-
-    /*comment*/
 }
 
 h1{
