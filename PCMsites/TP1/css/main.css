@@ -9,9 +9,6 @@ body {
     justify-content: space-between;
 }
 
-.icons{
-
-}
 
 .texto{
 
@@ -22,7 +19,7 @@ body {
 }
 
 #mainNav{
-    background-color: #000;
+    background-color: rgb(40, 40, 40);
     align-items: center;
     justify-content: space-between;
 }
@@ -34,12 +31,32 @@ body {
     color: green;
 }
 
+#nameBox:hover{
+    background-color: white
+}
+
 a.nav-link{
     color: white;
 }
 
 a.nav-link:hover {
-    color: green;
+    background-color: green;
+    color:white;
+}
+
+a.dropdown-item{
+    color: white;
+}
+
+a.dropdown-item:hover {
+    background-color: green;
+    color: white;
+}
+
+.dropdown-divider{
+    width: 20%;
+    margin-left: 2%;
+    background-color: green;
 }
 
 #skills div{
@@ -70,6 +87,9 @@ a.nav-link:hover {
 }
 
 .icon:hover {
-    background: #000;
     color: #000000;
+}
+
+.skillsTitle{
+    text-transform: uppercase;
 }
