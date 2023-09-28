@@ -1,0 +1,75 @@
+body {
+    font-family: 'Kalam', cursive;
+}
+
+.headerDiv{
+    background-color: green;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons{
+
+}
+
+.texto{
+
+}
+
+#slideshow{
+
+}
+
+#mainNav{
+    background-color: #000;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nameBox{
+    border: green 3px solid;
+    border-radius: 5px;
+    padding: 1%;
+    color: green;
+}
+
+a.nav-link{
+    color: white;
+}
+
+a.nav-link:hover {
+    color: green;
+}
+
+#skills div{
+}
+
+#skills{
+    margin: 5%;
+}
+
+.carouselText{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.carouselButton{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+}
+
+.menuBtn{
+    border: green 3px solid;
+}
+
+.icon {
+    color: #ffffff;
+}
+
+.icon:hover {
+    background: #000;
+    color: #000000;
+}
