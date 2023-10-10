@@ -64,9 +64,13 @@
                 <a class="navbar-brand" href="#" id="nameBox">Leonor Medeiros</a>
                 <button class="navbar-toggler change menuBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <div>
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse p-1 pt-3" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#">Home</a>
@@ -210,8 +214,22 @@
     </main>
         
     <footer>
-
+    <!-- Footer -->
+        <p class="copyright">&copy; 2023 by Leonor Medeiros - LM. Proudly created with HTML5 & CSS3 & JS</p>
     </footer>
+
+
+    <!-- scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+                const navbarToggler = document.querySelector(".navbar-toggler");
+                if (navbarToggler) {
+                    navbarToggler.addEventListener("click", function () {
+                        navbarToggler.classList.toggle("change");
+                    });
+                }
+            });
+    </script>
 
 </body>
 
