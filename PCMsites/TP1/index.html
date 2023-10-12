@@ -62,7 +62,7 @@
         <nav class="navbar navbar-expand-lg justify-content-space-between navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#" id="nameBox">Leonor Medeiros</a>
-                <button class="navbar-toggler change menuBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                <button class="navbar-toggler menuBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <div>
                         <div class="bar1"></div>
@@ -118,10 +118,13 @@
                         aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
+                    <div class="overlay"></div>
                     <div class="carousel-item active">
-                        <h2 class="carouselText">I Am Professor</h2>
-                        <button class="carouselButton">My work</button>
                         <img src="img/banner-1.jpeg" class="d-block w-100" alt="banner 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="carouselText">I Am Professor</h2>
+                            <button class="carouselButton">My work</button>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <h2 class="carouselText">I Am Professor</h2>
@@ -155,14 +158,29 @@
                     <div class="col text-center">
                         <h2 class="skillsTitle">My Skills</h2>
                         <h6 class="skillsTitle">Multimedia and Machine Learning</h6>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div id="goTop"></div>
+                                </div>
+                                <div class="col-1">
+                                    <a href="/PCMsites/TP1/index.html#mainNav">
+                                        <div id="checkBoxGoTop"><i class="fa-regular fa-square-check" style="color: #008000;"></i></div>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <div id="goTop"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-6">
-                                <img src="img/img1.jpg" alt="" width="90%">
-                                
+                    <div class="col-lg-6" >
+                        <div class="row" style="margin: 3%;">
+                            <div class="col-6 skills-item ">
+                                <i class="fa-brands fa-html5" style="color: #d3d3d3; margin: 10% 20% 0 0; font-size: 100px;"></i>
                             </div>
                             <div class="col-6">
                                 <h4 class="skillsTitle">Web</h4>
@@ -172,9 +190,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-6">
-                                <img src="img/img1s.jpg" alt="" width="90%">
+                        <div class="row" style="margin: 3%;">
+                            <div class="col-6 skills-item">
+                                <i class="fa-brands fa-html5" style="color: #d3d3d3; margin: 10% 20% 0 0; font-size: 100px;"></i>
                             </div>
                             <div class="col-6">
                                 <h4 class="skillsTitle">Mobile</h4>
@@ -184,9 +202,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-6">
-                                <img src="img/img2.jpg" alt="" width="90%">
+                        <div class="row" style="margin: 3%;">
+                            <div class="col-6 skills-item ">
+                                <i class="fa-brands fa-html5" style="color: #d3d3d3; margin: 10% 20% 0 0; font-size: 100px;"></i>
                             </div>
                             <div class="col-6">
                                 <h4 class="skillsTitle">Multimedia</h4>
@@ -196,9 +214,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-6">
-                                <img src="img/img3.jpg" alt="" width="90%">
+                        <div class="row" style="margin: 3%;">
+                            <div class="col-6 skills-item ">
+                                <i class="fa-brands fa-html5" style="color: #d3d3d3; margin: 10% 20% 0 0; font-size: 100px;"></i>
                             </div>
                             <div class="col-6">
                                 <h4 class="skillsTitle">M. Learning</h4>
@@ -206,6 +224,49 @@
                                     Sequi, odio totam commodi itaque cum illo.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About me -->
+        <section id="about-me">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="skillsTitle">About Me</h2>
+                        <h6 class="skillsTitle">Teaching, Researching and Engineering</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                            <div id="goTop"></div>
+                    </div>
+                    <div class="col-1">
+                            <a href="/PCMsites/TP1/index.html#mainNav">
+                                <div id="checkBoxGoTop"><i class="fa-regular fa-globe" style="color: #008000;"></i></div>
+                            </a>
+                    </div>
+                    <div class="col">
+                        <div id="goTop"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row" style="margin: 3%;">
+                        <!-- Process bar -->
+                        <div id="progress-box">
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum obcaecati quidem dolores veniam eaque nostrum quasi, repudiandae, officiis iusto, minima mollitia. Molestias magni cum recusandae quod eius debitis eaque pariatur.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row" style="margin: 3%; text-align: center;">
+                            <h4 class="skillsTitle">Alway learning and pushing boundaries</h4>
+                            <p style="color:white;">See my detailed resume to understand my boundaries</p>
+                            <a href="/resume.pdf"><button id="download-resume">Download Resume</button></a>
+                            
                     </div>
                 </div>
             </div>
@@ -225,6 +286,7 @@
                 const navbarToggler = document.querySelector(".navbar-toggler");
                 if (navbarToggler) {
                     navbarToggler.addEventListener("click", function () {
+                        console.log("click", navbarToggler);
                         navbarToggler.classList.toggle("change");
                     });
                 }
