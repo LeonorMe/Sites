@@ -184,7 +184,7 @@ footer{
     height: 100%;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
     z-index: -1;
-    pointer-events: none;
+    /*pointer-events: none;*/
     padding: 10%;
 }
 
@@ -194,6 +194,14 @@ footer{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 5px;
     padding:  1% 4%;
+    position: relative;
+}
+
+#download-resume:hover{
+    background-color: green;
+    color: white;
+    top: -10px;
+    transition: color 2s ease;
 }
 
 #progress-box{
