@@ -207,3 +207,20 @@ footer{
 #progress-box{
     border: #2a9134 3px solid;
 }
+
+.project-image{
+    opacity:0;
+}
+.project-image:hover{
+    opacity: 1;
+    transition: opacity 1s ease;
+    z-index: 2;
+}
+
+.card-img-top:hover{
+    background-color: rgba(0, 128, 0, 0.5);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    z-index: 1;
+    transform: scale(1.2);
+    transition: transform 1s ease-out;
+}
