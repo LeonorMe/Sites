@@ -22,11 +22,25 @@ class BlackJack {
 
         //métodos utilizados no construtor (DEVEM SER IMPLEMENTADOS PELOS ALUNOS)
         this.new_deck = function () {
+            const deck = [];
 
+            for(let i=0; i<52; i++){
+                console.log('Value', i);
+                deck.push(i%13 + 1);
+
+            }
+
+            console.log('Deck:', deck)
+            return deck
         };
 
         this.shuffle = function (deck) {
-
+            let m = deck.length, i;
+            while (m) {
+                i = Math.floor(Math.random() * m--);
+                [deck[m], deck[i]] = [deck[i], deck[m]];
+            }
+            return deck;
         };
 
         // baralho de cartas baralhado
@@ -51,18 +65,61 @@ class BlackJack {
 
     //MÉTODOS QUE DEVEM SER IMPLEMENTADOS PELOS ALUNOS
     get_cards_value(cards) {
+        let sum = 0;
+        let aces = 0;
 
+        cards.forEach(
+            function (card) {
+                if(card === 1){
+                    aces++;
+                }
+                else if(card > 10){
+                    sum += 10;
+                }
+                else{
+                    sum += card;
+                }
+            }
+        )
+
+        // aces
+        if(aces > 0){
+            sum += aces - 1
+            sum = sum > 10 ? sum += 1 : sum += 11;
+        }
+        
+        return sum;
     }
 
     dealer_move() {
-
+        this.dealer_cards.push(this.deck.pop());
+        return this.get_game_state();
     }
 
     player_move() {
-
+        this.player_cards.push(this.deck.pop());
+        return this.get_game_state();
     }
 
     get_game_state() {
+        // (0) o jogo não terminou
+        // (1) jogador fazer 21 pontos
+        // (2) jogador fazer > 21 pontos
+        // (3) dealer fazer mais pontos que o jogador
+        // (4) dealer fazer > 21 pontos
 
+        const playerPoints = this.get_cards_value(this.get_player_cards);
+        const dealerPoints = this.get_cards_value(this.get_dealer_cards);
+
+        var playerWon = playerPoints = 21 ? true : false;
+        this.state.playerBusted = playerPoints > 21 ? true : false;
+        this.state.dealerWon = dealerPoints > playerPoints ? true : false;
+        var dealerBusted = dealerPoints > 21 ? true : false;
+
+        if(this.state.dealerWon || this.state.playerBusted || playerWon || dealerBusted){
+            this.state.gameEnded = true;
+        }
+
+        return this.state;
     }
 }
