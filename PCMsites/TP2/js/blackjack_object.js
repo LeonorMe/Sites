@@ -111,14 +111,12 @@ class BlackJack {
         const playerPoints = this.get_cards_value(this.get_player_cards);
         const dealerPoints = this.get_cards_value(this.get_dealer_cards);
 
-        var playerWon = playerPoints = 21 ? true : false;
-        this.state.playerBusted = playerPoints > 21 ? true : false;
-        this.state.dealerWon = dealerPoints > playerPoints ? true : false;
-        var dealerBusted = dealerPoints > 21 ? true : false;
+        var playerWon = playerPoints === MAX_POINTS;
+        this.state.playerBusted = playerPoints > MAX_POINTS;
+        var dealerBusted = dealerPoints > MAX_POINTS && this.dealerTurn;
+        this.state.dealerWon = dealerPoints > playerPoints && this.dealerTurn && !dealerBusted;
 
-        if(this.state.dealerWon || this.state.playerBusted || playerWon || dealerBusted){
-            this.state.gameEnded = true;
-        }
+        this.state.gameEnded = this.state.dealerWon || this.state.playerBusted || playerWon || dealerBusted;
 
         return this.state;
     }

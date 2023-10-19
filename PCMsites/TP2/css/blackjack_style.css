@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(14, 14, 14);
+    color: silver;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 5%;
+}
+
+h1{
+    color: green;
+}
+
+#sec_debug{
+    margin: 5% 0;
+    opacity: 0.5;
+}
