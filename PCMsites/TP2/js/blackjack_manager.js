@@ -21,12 +21,11 @@ function finalize_buttons() {
 
 //FUNÇÕES QUE DEVEM SER IMPLEMENTADAS PELOS ALUNOS
 function new_game() {
-    // TODO mostrar cartas no ecra
     game = new BlackJack();
 
-    game.dealer_move();
-    game.dealer_move(); // mostrar voltada para baixo - X
-    game.player_move();
+    dealer_new_card();
+    dealer_new_card(); // mostrar voltada para baixo - X
+    player_new_card();
 
     buttons_initialization();
 
@@ -60,26 +59,40 @@ function update_player(state) {
 }
 
 function dealer_new_card() {
-    game.dealer_move();
-    update_dealer();
+    const state = game.dealer_move();
+    update_dealer(state);
+    
+    // TODO atualizar interface
+    document.getElementById("dealer").innerHTML = "Dealer: " + game.dealer_cards;
+    //.getElementById('dealerCard1').attr('src', '/PCMsites/TP2/img/svg/' + game.dealer_cards[0] + '_of_spades.png');
+    document.getElementById('dealerCard1').src = '/PCMsites/TP2/img/svg/2_of_spades.svg';
+    document.getElementById('dealerCard1').style = 'opacity:1';
+
     return game.state;
 }
 
-// TODO atualizar interface
+
 function player_new_card() {
     game.player_move();
     update_player();
-    return game.state;
+    
+    document.getElementById("player").innerHTML = "Player: " + game.player_cards;
+
+    //document.getElementById('playerCard1').attr('src', '/PCMsites/TP2/img/svg/' + game.dealer_cards[0] + '_of_spades.png');
+    document.getElementById('playerCard1').src = '/PCMsites/TP2/img/svg/2_of_spades.svg';
+    document.getElementById('playerCard1').style = 'opacity:1';
+
+    return game.state; // ??
 }
 
 function dealer_finish() {
-    /*
-    Esta função chama o método get_game_state() da classe “blackJack” e
-    coloca a “true” a variável “DealerTurn da classe “BlackJack”. Depois é criado
-    um ciclo até que o jogo termine (state.gameEnded). Nesse ciclo, é atualizado
-    o dealer, realizada uma jogada do dealer e atualizado o estado do jogo em cada
-    iteração.
-    */
+    game.get_game_state();
+    game.DealerTurn = true;
+    while(!game.state.gameEnded){
+        game.dealer_move();
+        update_dealer();
+        game.get_game_state();
+    }
 
     BlackJack.DealerTurn = true;
 }

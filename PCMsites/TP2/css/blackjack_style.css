@@ -7,10 +7,50 @@ body{
 }
 
 h1{
-    color: green;
+    color: #008000;
+}
+
+.logo{
+    width: 40px;
+}
+
+.logo:hover{
+    transform: rotate(45deg) scale(1.1);
+    animation: 3s linear;
+}
+
+.card{
+    width: 100px;
+}
+
+#header{
+    background-color: rgb(0, 0, 0);
+    padding: 5%;
+}
+
+#game{
+    margin: 10% 0;
+}
+
+#dealerInfo{
+    margin: 5% 0;
+
+}
+
+#playerInfo{
+    margin: 5% 0;
+}
+
+#buttons{
+    margin: 10% 10%;
 }
 
 #sec_debug{
     margin: 5% 0;
     opacity: 0.5;
+}
+
+#footer{
+    background-color: rgb(0, 0, 0);
+    padding: 5%;
 }

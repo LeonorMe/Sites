@@ -108,8 +108,8 @@ class BlackJack {
         // (3) dealer fazer mais pontos que o jogador
         // (4) dealer fazer > 21 pontos
 
-        const playerPoints = this.get_cards_value(this.get_player_cards);
-        const dealerPoints = this.get_cards_value(this.get_dealer_cards);
+        const playerPoints = this.get_cards_value(this.get_player_cards());
+        const dealerPoints = this.get_cards_value(this.get_dealer_cards());
 
         var playerWon = playerPoints === MAX_POINTS;
         this.state.playerBusted = playerPoints > MAX_POINTS;
