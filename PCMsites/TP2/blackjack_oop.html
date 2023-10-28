@@ -14,8 +14,8 @@
 <body>
   <header class="container" id="header">
     <div class="row justify-content-center w-5">
-      <div class="col-6" >
-        <img src="/PCMsites/TP2/img/svg/black_joker.svg" alt="back_joker_card" class="logo">
+      <div class="col-6">
+        <img src="/PCMsites/TP2/img/svg/black_joker.svg" onmouseover="logoAnimation()" alt="back_joker_card" class="logo" id="logo">
       </div>
       <div class="col-6 align-middle">
         <h1>Blackjack</h1>
@@ -28,40 +28,21 @@
       <article id="dealerInfo">
         <h2>Dealer</h2>
         <p id="dealer"></p>
-        <div id="dealerCards">
-            <div class="row w-5">
-              <div class="col">
-                <img id="dealerCard1" src="/PCMsites/TP2/img/svg/card_back.svg" alt="" style="opacity:1" class="card">           
-              </div>
-              <div class="col">
-                <img id="dealerCard2" src="/PCMsites/TP2/img/svg/card_back.svg" alt="" style="opacity:1" class="card">
-              </div>
-              <div class="col">
-                <img id="dealerCard3" src="/PCMsites/TP2/img/svg/card_back.svg" alt="" style="opacity:1" class="card">
-              </div>
-            </div>
-        </div>
+          <div class="row w-5" id="dealerCards">
+            <!-- Add card with js -->
+          </div>
       </article>
 
       <article id="playerInfo">
         <h2>Player</h2>
         <p id="player"></p>
-        <div id = "playerCards">
-          <div class="row w-5">
-            <div class="col">
-              <img id="playerCard1" src="/PCMsites/TP2/img/svg/card_back.svg" alt="" style="opacity:1" class="card">
-            </div>      
-            <div class="col"> 
-              <img id="playerCard2" src="/PCMsites/TP2/img/svg/card_back.svg" alt="" style="opacity:1" class="card">
-            </div>
-            <div class="col">
-              <img id="playerCard3" src="/PCMsites/TP2/img/svg/card_back.svg" alt="" style="opacity:1" class="card">
-            </div>
+          <div class="row w-5" id = "playerCards">
+            <!-- Add card with js -->
           </div>
-        </div>
       </article>
 
       <div id="buttons">
+        <h3 id="gameStatus"></h3>
         <div class="row justify-content-center">
           <div class="col">
             <button class="btn btn-primary" id="card" type="button" onclick="player_new_card()">Card</button>
@@ -98,13 +79,18 @@
   <script>
     window.onload = new_game();
   </script>
+
   <script>
     function logoAnimation(){
-      if(document.getElementById("logo").src == '/PCMsites/TP2/img/svg/black_joker.svg')
-        document.getElementById("logo").src = '/PCMsites/TP2/img/svg/card_back.svg';
-      else
-        document.getElementById("logo").src = '/PCMsites/TP2/img/svg/black_joker.svg';
+      document.getElementById("logo").style.transform = "rotate(45deg)";
+      document.getElementById("logo").style.transition = "transform 1.5s ease";
       
+      document.getElementById("logo").src = '/PCMsites/TP2/img/svg/card_back.svg';
+      setTimeout(function () {
+        document.getElementById("logo").style.transform = "rotate(0deg)";
+        document.getElementById("logo").style.transition = "transform 1.5s ease";
+        document.getElementById("logo").src = '/PCMsites/TP2/img/svg/black_joker.svg';
+      }, 1500);
     }
   </script>
 </body>

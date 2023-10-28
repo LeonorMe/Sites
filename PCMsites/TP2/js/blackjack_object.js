@@ -121,3 +121,46 @@ class BlackJack {
         return this.state;
     }
 }
+
+class Card {
+    enum = {
+        'E': 0, // Espadas
+        'C': 1, // Copas
+        'P': 2, // Paus
+        'O': 3  // Ouros
+    };
+
+    constructor(value, suit) {
+        this.v = value;
+        if(suit in this.enum)
+            this.s = suit;
+    }
+}
+
+class BlackJack2{
+
+    constructor() {
+        this.deck = [];
+        this.dealer_cards = [];
+        this.player_cards = [];
+        this.state = {
+            'gameEnded': false,
+            'dealerWon': false,
+            'playerBusted': false
+        };
+
+        this.new_deck = function () {
+            const deck = [];
+
+            for(let i=0; i<52; i++){
+                console.log('Value', i);
+                deck.push(i%13 + 1);
+
+            }
+
+            console.log('Deck:', deck)
+            return deck
+        };
+
+    }
+}
