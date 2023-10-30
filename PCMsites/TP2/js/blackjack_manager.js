@@ -65,7 +65,7 @@ function dealer_new_card(isUp) {
     update_dealer(state);
     
     document.getElementById("dealer").innerHTML = "Dealer: " + game.dealer_cards;
-    showCard(game.dealer_cards[game.dealer_cards.length - 1], d, isUp);
+    showCard(game.dealer_cards[game.dealer_cards.length - 1], 'd', isUp);
     
     return game.state;
 }
@@ -76,7 +76,7 @@ function player_new_card(isUp) {
     update_player();
     
     document.getElementById("player").innerHTML = "Player: " + game.player_cards;
-    showCard(game.player_cards[game.player_cards.length - 1], p1, isUp);
+    showCard(game.player_cards[game.player_cards.length - 1], 'p1', isUp);
 
     return game.state;
 }
@@ -97,7 +97,7 @@ function dealer_finish() {
 
 function showCard(card, player, isUp){
     switch(player){
-        case p1:
+        case 'p1':
             document.getElementById('playerCards').innerHTML += '<div class="row w-5">';
             if(isUp)
                 document.getElementById('playerCards').innerHTML += '<img src="/PCMsites/TP2/img/svg/' + card.v + '_of_' + card.s + '.svg" alt="card" class="card">';
@@ -105,7 +105,7 @@ function showCard(card, player, isUp){
                 document.getElementById('playerCards').innerHTML += '<img src="/PCMsites/TP2/img/svg/back.svg" alt="card" class="card">';
             document.getElementById('playerCards').innerHTML += '</div>';
             break;
-        case d:
+        case 'd':
             document.getElementById('dealerCards').innerHTML += '<div class="row w-5">';
             if(isUp)
                 document.getElementById('dealerCards').innerHTML += '<img src="/PCMsites/TP2/img/svg/' + card.v + '_of_' + card.s + '.svg" alt="card" class="card">';

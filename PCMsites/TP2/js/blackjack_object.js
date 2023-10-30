@@ -3,35 +3,60 @@
 //constante com o número máximo de pontos para blackJack
 const MAX_POINTS = 21;
 
-// Classe BlackJack - construtor
-class BlackJack {
-    constructor() {
-        // array com as cartas do dealer
-        this.dealer_cards = [];
-        // array com as cartas do player
-        this.player_cards = [];
-        // variável booleana que indica a vez do dealer jogar até ao fim
-        this.dealerTurn = false;
+class Card {
+    constructor(value, suit) {
+        if((value >= 1 || value <= 13) && (suit >= 0 || suit <= 3)){
+            this.v = value;
+            this.s = suit;
+        }
+    }
 
-        // objeto na forma literal com o estado do jogo
+    toString() {
+        let value = this.v;
+        let suit = this.s;
+
+        switch(suit){
+            case 0:
+                suit = "♠";
+                break;
+            case 1:
+                suit = "♣";
+                break;
+            case 2:
+                suit = "♥";
+                break;
+            case 3:
+                suit = "♦";
+                break;
+        }
+
+        return value + suit + " ";
+    }
+}
+
+class BlackJack{
+
+    constructor() {
+        this.deck = [];
+        this.dealer_cards = [];
+        this.player_cards = [];
         this.state = {
             'gameEnded': false,
             'dealerWon': false,
             'playerBusted': false
         };
 
-        //métodos utilizados no construtor (DEVEM SER IMPLEMENTADOS PELOS ALUNOS)
         this.new_deck = function () {
             const deck = [];
-
-            for(let i=0; i<52; i++){
-                console.log('Value', i);
-                deck.push(i%13 + 1);
-
+            for(let j=0; j<4; j++){
+                for(let i=1; i<=13; i++){
+                    var card0 = new Card(i, j);
+                    deck.push(card0);
+                    console.log(card0.toString());
+                }
             }
-
-            console.log('Deck:', deck)
-            return deck
+            
+            return deck;
         };
 
         this.shuffle = function (deck) {
@@ -45,8 +70,10 @@ class BlackJack {
 
         // baralho de cartas baralhado
         this.deck = this.shuffle(this.new_deck());
+        console.log('Shuffled deck:', this.deck);
     }
 
+    
     // métodos
     // devolve as cartas do dealer num novo array (splice)
     get_dealer_cards() {
@@ -69,15 +96,15 @@ class BlackJack {
         let aces = 0;
 
         cards.forEach(
-            function (card) {
-                if(card === 1){
+            function (c) {
+                if(c.v === 1){
                     aces++;
                 }
-                else if(card > 10){
+                else if(c.v > 10){
                     sum += 10;
                 }
                 else{
-                    sum += card;
+                    sum += c.v;
                 }
             }
         )
@@ -102,12 +129,6 @@ class BlackJack {
     }
 
     get_game_state() {
-        // (0) o jogo não terminou
-        // (1) jogador fazer 21 pontos
-        // (2) jogador fazer > 21 pontos
-        // (3) dealer fazer mais pontos que o jogador
-        // (4) dealer fazer > 21 pontos
-
         const playerPoints = this.get_cards_value(this.get_player_cards());
         const dealerPoints = this.get_cards_value(this.get_dealer_cards());
 
@@ -119,48 +140,5 @@ class BlackJack {
         this.state.gameEnded = this.state.dealerWon || this.state.playerBusted || playerWon || dealerBusted;
 
         return this.state;
-    }
-}
-
-class Card {
-    enum = {
-        'E': 0, // Espadas
-        'C': 1, // Copas
-        'P': 2, // Paus
-        'O': 3  // Ouros
-    };
-
-    constructor(value, suit) {
-        this.v = value;
-        if(suit in this.enum)
-            this.s = suit;
-    }
-}
-
-class BlackJack2{
-
-    constructor() {
-        this.deck = [];
-        this.dealer_cards = [];
-        this.player_cards = [];
-        this.state = {
-            'gameEnded': false,
-            'dealerWon': false,
-            'playerBusted': false
-        };
-
-        this.new_deck = function () {
-            const deck = [];
-
-            for(let i=0; i<52; i++){
-                console.log('Value', i);
-                deck.push(i%13 + 1);
-
-            }
-
-            console.log('Deck:', deck)
-            return deck
-        };
-
     }
 }
