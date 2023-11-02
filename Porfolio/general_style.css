@@ -2,12 +2,29 @@ body{
     background-color: bisque;
 }
 
-#top-nav{
+a{
+    background-color: black;
+    border-radius: 20%;
+    color: lightgreen;
+    padding: 1%;
+    margin: 5%;
+}
 
+a:hover{
+    color: rgb(145, 201, 62);
+}
+
+#top-nav{
+    background-color: rgb(145, 201, 62);
+    color: black;
 }
 
 #side-nav{
-
+    background-color: rgb(91, 136, 24);
+    color: white;
 }
 
-article{}
+article{
+    background-color: beige;
+    color: rgb(255, 255, 255);
+}
