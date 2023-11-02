@@ -116,7 +116,7 @@ class BlackJack{
 
         cards.forEach(
             function (card) {
-                c = card.v;
+                var c = card.v;
                 if(c == 1){
                     aces++;
                 }
