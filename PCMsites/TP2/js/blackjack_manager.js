@@ -1,10 +1,10 @@
 //Blackjack oop
 
 let game = null;
-
+/*
 function debug(an_object) {
     document.getElementById("debug").innerHTML = JSON.stringify(an_object);
-}
+} */
 
 function buttons_initialization() {
     document.getElementById("card").disabled = false;
@@ -29,44 +29,61 @@ function new_game() {
 
     buttons_initialization();
 
-    debug(game);
+    //debug(game);
 }
 
 function update_dealer(state) {
+    /*
     let string = "Dealer: " + game.dealer_cards
-    document.getElementById("gameStatus").innerHTML = game.get_game_state();
     
     if(game.state.gameEnded){
-
         string += " - " + (game.state.dealerWon ? "Won" : "Lost");
         finalize_buttons();
     }
     
-    document.getElementById("dealer").innerHTML += string;
+    document.getElementById("dealer").innerHTML = string;
+    */
+
+    if(game.state.gameEnded){
+        finalize_buttons();
+    }
+
+    showState();
 }
 
 function update_player(state) {
+    /*
     let string = "Player: " + game.player_cards;
-    document.getElementById("gameStatus").innerHTML = game.get_game_state();
 
     if(game.state.gameEnded){
-        string += " - " + (game.state.playerWon ? "Won" : "Lost");
+        string += " - " + (game.state.playerBusted ? "Lost" : "Won");
         finalize_buttons();
 
         if(game.state.playerWon)
             winAnimation();
     }
 
-    document.getElementById("player").innerHTML += string;
+    document.getElementById("player").innerHTML = string;
+    */
+
+    if(game.state.gameEnded){
+        finalize_buttons();
+    }
+    
+    document.getElementById("player").innerHTML = 'Count: ' + game.get_cards_value(game.get_player_cards());
+
+    showState();
 }
 
 function dealer_new_card(isUp) {
     const state = game.dealer_move();
     update_dealer(state);
     
-    document.getElementById("dealer").innerHTML = "Dealer: " + game.dealer_cards;
+    //console.log(game.dealer_cards[game.dealer_cards.length - 1].toString());
+
+    //document.getElementById("dealer").innerHTML = "Dealer: " + game.dealer_cards;
     showCard(game.dealer_cards[game.dealer_cards.length - 1], 'd', isUp);
-    
+
     return game.state;
 }
 
@@ -75,48 +92,80 @@ function player_new_card(isUp) {
     game.player_move();
     update_player();
     
-    document.getElementById("player").innerHTML = "Player: " + game.player_cards;
+    //console.log(game.dealer_cards[game.dealer_cards.length - 1].toString())
+
+    //document.getElementById("player").innerHTML = "Player: " + game.player_cards;
     showCard(game.player_cards[game.player_cards.length - 1], 'p1', isUp);
+    
 
     return game.state;
 }
 
 function dealer_finish() {
+    game.DealerTurn = true; 
     game.get_game_state();
-    game.DealerTurn = true;
     while(!game.state.gameEnded){
+        console.log("dealer move");
         game.dealer_move();
         update_dealer();
         game.get_game_state();
     }
 
-    BlackJack.DealerTurn = true;
+    //BlackJack.DealerTurn = true;
+    game.DealerTurn = false;
 }
 
 // TODO adicionar auxiliares se necessario
 
-function showCard(card, player, isUp){
+function showCard(card, player, isUp){  
+    str = '<img src="/PCMsites/TP2/img/svg/' + getValue(card) + '_of_' + card.s + '.svg" alt="card" class="card">';
     switch(player){
         case 'p1':
-            document.getElementById('playerCards').innerHTML += '<div class="row w-5">';
-            if(isUp)
-                document.getElementById('playerCards').innerHTML += '<img src="/PCMsites/TP2/img/svg/' + card.v + '_of_' + card.s + '.svg" alt="card" class="card">';
-            else
-                document.getElementById('playerCards').innerHTML += '<img src="/PCMsites/TP2/img/svg/back.svg" alt="card" class="card">';
-            document.getElementById('playerCards').innerHTML += '</div>';
-            break;
+            document.getElementById('playerCards').innerHTML += '<div class="col text-center">'
+                + str + '</div>';
+            break; 
         case 'd':
-            document.getElementById('dealerCards').innerHTML += '<div class="row w-5">';
-            if(isUp)
-                document.getElementById('dealerCards').innerHTML += '<img src="/PCMsites/TP2/img/svg/' + card.v + '_of_' + card.s + '.svg" alt="card" class="card">';
-            else
-                document.getElementById('dealerCards').innerHTML += '<img src="/PCMsites/TP2/img/svg/back.svg" alt="card" class="card">';
-            document.getElementById('dealerCards').innerHTML += '</div>';
+            document.getElementById('dealerCards').innerHTML += '<div class="col text-center">'
+            + (isUp ? str : '<img src="/PCMsites/TP2/img/svg/card_back.svg" alt="card" class="card">')
+            + '</div>';
             break;
         default:
             document.getElementById('playerCards').innerHTML = "";
             document.getElementById('dealerCards').innerHTML = "";
 
+    }
+}
+
+function getValue(card) {
+        switch(card.v){
+        case 1:
+            return 'ace';
+        case 11:
+            return 'jack';
+        case 12:
+            return 'queen';
+        case 13:
+            return 'king';
+        default:
+            return card.v;
+    }
+}
+
+function showState(){
+    if(game.state.gameEnded){
+        
+        if(game.state.dealerWon)
+            document.getElementById("gameStatus").innerHTML = "Dealer Won ";
+        else if(game.state.playerBusted)
+            document.getElementById("gameStatus").innerHTML = "Player Busted ";
+        else{
+            document.getElementById("gameStatus").innerHTML = "Player Won ";
+            winAnimation();
+        }
+        document.getElementById("gameStatus").style.color = "#00ff00";
+    }else{
+        document.getElementById("gameStatus").innerHTML = "Game in progress";
+        document.getElementById("gameStatus").style.color = "silver";
     }
 }
 

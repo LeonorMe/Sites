@@ -13,12 +13,18 @@
 
 <body>
   <header class="container" id="header">
-    <div class="row justify-content-center w-5">
-      <div class="col-6">
+    <div class="row">
+      <div class="col-2">
         <img src="/PCMsites/TP2/img/svg/black_joker.svg" onmouseover="logoAnimation()" alt="back_joker_card" class="logo" id="logo">
       </div>
-      <div class="col-6 align-middle">
+      <div class="col-8 align-left">
         <h1>Blackjack</h1>
+      </div>
+      <div class="col-2">
+        <a href="https://www.blackjackapprenticeship.com/how-to-play-blackjack/"> 
+          <i class="fa-solid fa-circle-info"></i>
+          <i style="font-size:32px" class="fa">&#xf05a;</i>
+        </a>
       </div>
     </div>
   </header>
@@ -28,7 +34,7 @@
       <article id="dealerInfo">
         <h2>Dealer</h2>
         <p id="dealer"></p>
-          <div class="row w-5" id="dealerCards">
+          <div class="row d-flex justify-content-center" id="dealerCards">
             <!-- Add card with js -->
           </div>
       </article>
@@ -36,7 +42,7 @@
       <article id="playerInfo">
         <h2>Player</h2>
         <p id="player"></p>
-          <div class="row w-5" id = "playerCards">
+          <div class="row d-flex justify-content-center" id = "playerCards">
             <!-- Add card with js -->
           </div>
       </article>
@@ -58,12 +64,13 @@
       </div>
       
     </section>
-
+    <!--
     <section id="sec_debug">
       <h2>Debug</h2>
       <p id="debug">
       </p>
     </section>
+    -->
   </main>
 
   <footer class="container" id="footer">

@@ -3,35 +3,55 @@
 //constante com o número máximo de pontos para blackJack
 const MAX_POINTS = 21;
 
-class Card {
+class Card{
     constructor(value, suit) {
-        if((value >= 1 || value <= 13) && (suit >= 0 || suit <= 3)){
+        if(value >= 1 && value <= 13){
             this.v = value;
-            this.s = suit;
+        }
+            
+        if( suit >= 0 && suit <= 3){
+
+            var ss = '';
+            switch(suit){
+                case 0:
+                    ss = 'spades';
+                    break;
+                case 1:
+                    ss = 'clubs';
+                    break;
+                case 2:
+                    ss = 'hearts';
+                    break;
+                case 3:
+                    ss = 'diamonds';
+                    break;
+            }
+            this.s = ss;
         }
     }
 
-    toString() {
+    toString(){
         let value = this.v;
         let suit = this.s;
 
         switch(suit){
-            case 0:
+            case 'spades':
                 suit = "♠";
                 break;
-            case 1:
+            case 'clubs':
                 suit = "♣";
                 break;
-            case 2:
+            case 'hearts':
                 suit = "♥";
                 break;
-            case 3:
+            case 'diamonds':
                 suit = "♦";
                 break;
         }
 
         return value + suit + " ";
     }
+
 }
 
 class BlackJack{
@@ -48,11 +68,11 @@ class BlackJack{
 
         this.new_deck = function () {
             const deck = [];
+            
             for(let j=0; j<4; j++){
                 for(let i=1; i<=13; i++){
-                    var card0 = new Card(i, j);
-                    deck.push(card0);
-                    console.log(card0.toString());
+                    deck.push(new Card(i, j));
+                    //console.log(card0.toString());
                 }
             }
             
@@ -70,7 +90,6 @@ class BlackJack{
 
         // baralho de cartas baralhado
         this.deck = this.shuffle(this.new_deck());
-        console.log('Shuffled deck:', this.deck);
     }
 
     
@@ -96,15 +115,16 @@ class BlackJack{
         let aces = 0;
 
         cards.forEach(
-            function (c) {
-                if(c.v === 1){
+            function (card) {
+                c = card.v;
+                if(c == 1){
                     aces++;
                 }
-                else if(c.v > 10){
+                else if(c > 10){
                     sum += 10;
                 }
                 else{
-                    sum += c.v;
+                    sum += c;
                 }
             }
         )
