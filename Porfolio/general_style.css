@@ -38,3 +38,10 @@ article{
 .col{
     margin: 20%;
 }
+
+#profile-foto{
+    border-radius: 50%;
+    border-color: aquamarine solid 5px;
+    width: 50%;
+    height: 50%;
+}
