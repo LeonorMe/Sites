@@ -52,6 +52,9 @@ class Card{
         return value + suit + " ";
     }
 
+    get value(){
+        return this.v;
+    }
 }
 
 class BlackJack{
@@ -63,7 +66,7 @@ class BlackJack{
         this.state = {
             'gameEnded': false,
             'dealerWon': false,
-            'playerBusted': false
+            'playerWon': false
         };
 
         this.new_deck = function () {
@@ -116,15 +119,14 @@ class BlackJack{
 
         cards.forEach(
             function (card) {
-                var c = card.v;
-                if(c == 1){
+                if(card.v == 1){
                     aces++;
                 }
-                else if(c > 10){
+                else if(card.v > 10){
                     sum += 10;
                 }
                 else{
-                    sum += c;
+                    sum += card.v;
                 }
             }
         )
@@ -152,12 +154,17 @@ class BlackJack{
         const playerPoints = this.get_cards_value(this.get_player_cards());
         const dealerPoints = this.get_cards_value(this.get_dealer_cards());
 
-        var playerWon = playerPoints === MAX_POINTS;
-        this.state.playerBusted = playerPoints > MAX_POINTS;
-        var dealerBusted = dealerPoints > MAX_POINTS && this.dealerTurn;
-        this.state.dealerWon = dealerPoints > playerPoints && this.dealerTurn && !dealerBusted;
+        if(playerPoints == 21){
+            this.state.playerWon = true;
+            this.state.gameEnded = true;
+        }
+        else if(playerPoints > 21){
+            this.state.dealerWon = true;
+            this.state.gameEnded = true;
+        }
 
-        this.state.gameEnded = this.state.dealerWon || this.state.playerBusted || playerWon || dealerBusted;
+        if(this.dealerTurn)
+            console.log("dealerTurn - claculate dealer sum now: " + dealerPoints);
 
         return this.state;
     }
