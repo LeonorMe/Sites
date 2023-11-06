@@ -249,50 +249,7 @@ function showState() {
 }
 
 function winAnimation() {
-  let playerCards = document.getElementById("playerCards");
-  let dealerCards = document.getElementById("dealerCards");
-
-  let playerCardsLeft = playerCards.offsetLeft;
-  let playerCardsTop = playerCards.offsetTop;
-
-  let dealerCardsLeft = dealerCards.offsetLeft;
-  let dealerCardsTop = dealerCards.offsetTop;
-
-  let playerCardsWidth = playerCards.offsetWidth;
-  let playerCardsHeight = playerCards.offsetHeight;
-
-  let dealerCardsWidth = dealerCards.offsetWidth;
-  let dealerCardsHeight = dealerCards.offsetHeight;
-
-  let playerCard1 = document.getElementById("playerCard1");
-  let playerCard2 = document.getElementById("playerCard2");
-  let playerCard3 = document.getElementById("playerCard3");
-  let playerCard4 = document.getElementById("playerCard4");
-  let playerCard5 = document.getElementById("playerCard5");
-  let playerCard6 = document.getElementById("playerCard6");
-  let playerCard7 = document.getElementById("playerCard7");
-  let playerCard8 = document.getElementById("playerCard8");
-  let playerCard9 = document.getElementById("playerCard9");
-  let playerCard10 = document.getElementById("playerCard10");
-
-  let dealerCard1 = document.getElementById("dealerCard1");
-  let dealerCard2 = document.getElementById("dealerCard2");
-  let dealerCard3 = document.getElementById("dealerCard3");
-  let dealerCard4 = document.getElementById("dealerCard4");
-  let dealerCard5 = document.getElementById("dealerCard5");
-  let dealerCard6 = document.getElementById("dealerCard6");
-  let dealerCard7 = document.getElementById("dealerCard7");
-  let dealerCard8 = document.getElementById("dealerCard8");
-  let dealerCard9 = document.getElementById("dealerCard9");
-  let dealerCard10 = document.getElementById("dealerCard10");
-
-  let playerCardsLeftFinal =
-    dealerCardsLeft + dealerCardsWidth / 2 - playerCardsWidth / 2;
-  let playerCardsTopFinal =
-    dealerCardsTop + dealerCardsHeight / 2 - playerCardsHeight / 2;
-
-  let dealerCardsLeftFinal =
-    playerCardsLeft + playerCardsWidth / 2 - dealerCardsWidth / 2;
-  let dealerCardsTopFinal =
-    playerCardsTop + playerCardsHeight / 2 - dealerCardsHeight / 2;
+    game.get_dealer_cards().forEach(card => {
+        document.getElementById("body").style.backgroundImage = "url('/PCMsites/TP2/img/svg/black_joker.svg')";
+    });
 }
