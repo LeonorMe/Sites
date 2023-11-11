@@ -11,3 +11,16 @@ body{
 h1{
     color: green;
 }
+
+.question{
+    margin: 5%;
+    padding: 5%;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    text-align: left;
+}
+
+b{
+    color:rgb(222, 255, 221);
+}

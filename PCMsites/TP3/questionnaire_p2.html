@@ -4,51 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionary_p3</title>
-    <link rel="stylesheet" href="/PCMsites/TP3/styles/questionnaire.css">
+    <title>Tarefas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/questionnaire.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <h1>Questinare</h1>
+    <h1>Questionário</h1>
     <h2>Tarefas</h2>
 
-    <form action="" id="">
-        <div>
-            <p>para par de adjetivos selecione</p>
-            <div class="row">
-                <div class="col-2">fantastica</div>
-                <div class="col-8"><input type="range" name="fantastica-horrivel" id="fantastica-horrivel" min="1"
-                        max="7"></div>
-                <div class="col-2">aborrecia</div>
-            </div>
-            <div class="row">
-                <div class="col-2">fegerastica</div>
-                <div class="col-8"><input type="range" name="fantastica-horrivel" id="fantastica-horrivel" min="1"
-                        max="7"></div>
-                <div class="col-2">trlmlia</div>
+    <form action="questionarie-p2" action="questionary">
+        <p>Por favor, realiza as seguintes tarefas e descreva-nos os resultados obtidos.</p>
+
+        <div class="question" id="t1">
+            <b>Tarefa 1 - Explorar</b>
+            <label for="outros-sites-s">Explore o site livremente e indique se encontrou algum erro ou se sentiu alguma dificuldade em
+                perceber a funcionalidade das opções.</label>
+            <div class="col">
+                    <input type="text" name="t1" id="t1-text">
             </div>
         </div>
 
-        <div>
-            <p>bla bla</p>
-            <div class="row">
-                <div class="col-2">Mau</div>
-                <div class="col-8">
-                    1 <input type="radio" name="blabla-1" id="blabla">
-                    2 <input type="radio" name="blabla-2" id="blabla">
-                    3 <input type="radio" name="blabla-3" id="blabla">
-                    4 <input type="radio" name="blabla-4" id="blabla">
-                    5 <input type="radio" name="blabla-5" id="blabla">
+        <div class="question" id="t2">
+            <b>Tarefa 2 - Pesquisa Categorias</b>
+            <p>Escolha a opção de pesquisa por palavra-chave, selecione uma categoria à sua escolha e observe os
+resultados.</p>
+            <label for="outros-sites-s">Que dificuldades encontrou?</label>
+            <div class="col">
+                    <input type="text" name="t1" id="t1-text">
+            </div>
+        </div>
+
+        <div class="question" id="t3">
+            <b>Tarefa 3 – Pesquisa Cor</b>
+            <p>Escolha a opção de pesquisa por cor dominante, selecione uma cor à sua escolha e observe os
+resultados.</p>
+            <label for="outros-sites-s">Que dificuldades encontrou?</label>
+            <div class="col">
+                    <input type="text" name="t1" id="t1-text">
+            </div>
+        </div>
+
+        <div class="question" id="t4">
+            <b>Tarefa 4 – Pesquisa Imagens Semelhantes</b>
+            <p>Escolha a opção de pesquisa por imagens semelhantes, selecione uma imagem à sua escolha e
+observe os resultados.
+</p>
+            <label for="outros-sites-s">Que dificuldades encontrou?</label>
+            <div class="col">
+                    <input type="text" name="t1" id="t1-text">
+            </div>
+        </div>
+
+        <div class="question" id="t5">
+            <b>Comparação entre Tipos de Pesquisa</b>
+            <label for="outros-sites-s">Qual o tipo de pesquisa que acha mais adequado e porquê?</label>
+            <div class="col">
+                    <input type="text" name="t1" id="t1-text">
+            </div>
+        </div>
+
+        <div id="continuar">
+            <a href="/PCMsites/TP3/questionnaire_p3.html">
+                <div class="btn btn-primary" type="submite" role="sucess">
+                    Continuar 
                 </div>
-                <div class="col-2">Fixe</div>
-            </div>
+            </a>
         </div>
 
-
-        <input class="btn btn-primary" type="submit" value="Proxima pagina">
-        <button>
-            <a href="/PCMsites/TP3/questionnaire_p3.html">submit</a>
-        </button>
     </form>
 </body>
 

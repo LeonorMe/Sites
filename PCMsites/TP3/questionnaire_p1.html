@@ -2,56 +2,175 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Caracterização</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/questionnaire.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
+    <h1>Questionário</h1>
+    <h2>Caracterização</h2>
+
     <form action="questionarie-p1" action="questionary">
-        <div>
-            <p>Qual é</p>
-            <label for="idade-18">&lt;18</label>
-            <input type="radio" name="idade" id="isedade-18" requeseie>
-            <label for="idade-18">18-24</label>
-            <input type="radio" name="idade" id="isedade-18" requeseie>
+        <div class="question" id="p1">
+            <b>1. Qual é a sua idade?*</b>
+            <div class="row">
+                <div class="col-2">
+                    <input type="radio" name="idade" id="idade-18" requeseie>
+                    <label for="idade-18">&lt;18</label>
+                </div>
+
+                <div class="col-2">
+                    <input type="radio" name="idade" id="idade-18-24" requeseie>
+                    <label for="idade-18-24">18-24</label>
+                </div>
+
+                <div class="col-2">
+                    <input type="radio" name="idade" id="idade-25-29" requeseie>
+                    <label for="idade-25-29">25-29</label>
+                </div>
+
+                <div class="col-2">
+                    <input type="radio" name="idade" id="idade-30-34" requeseie>
+                    <label for="idade-30-34">30-34</label>
+                </div>
+
+                <div class="col-2">
+                    <input type="radio" name="idade" id="idade-35-39" requeseie>
+                    <label for="idade-35-39">35-39</label>
+                </div>
+
+                <div class="col-2">
+                    <input type="radio" name="idade" id="idade-40" requeseie>
+                    <label for="idade-40">&ge;40</label>
+                </div>
+            </div>
         </div>
-        <div>
-            <p>Qual o brownser</p>
-            <label for="preferencia 1">1ª preferiencia</label>
-            <select name="" id="">
-                <option value="chrome">Chrome</option>
-                <option value="firefox">Firefox</option>
-                <option value="edge">Edge</option>
-                <option value="safari">Safari</option>
-                <option value="opera">Opera</option>
-                <option value="sem preferencia">sem prefencia</option>
-            </select>
-            // TODO pelo menos escolhe ruma e
-            <select name="" id="">
-                <option value="chrome">Chrome</option>
-                <option value="firefox">Firefox</option>
-                <option value="edge">Edge</option>
-                <option value="safari">Safari</option>
-                <option value="opera">Opera</option>
-                <option value="sem preferencia">sem prefencia</option>
-            </select>
+        
+        <div class="question" id="p2">
+            <b>2. Com que género se identifica?*</b>
+            <div class="row">
+                <div class="col-3">
+                    <input type="radio" name="genero" id="genero-m" requeseie>
+                    <label for="genero-m">Masculino</label>
+                </div>
+
+                <div class="col-3">
+                    <input type="radio" name="genero" id="genero-f" requeseie>
+                    <label for="genero-f">Feminino</label>
+                </div>
+
+                <div class="col-3">
+                    <input type="radio" name="genero" id="genero-nb" requeseie>
+                    <label for="genero-nb">Não-binário</label>
+                </div>
+
+                <div class="col-3">
+                    <input type="radio" name="genero" id="genero-ou" requeseie>
+                    <label for="genero-ou">Prefiro não responder</label>
+                </div>
+            </div>
         </div>
 
-        <div>
-            <p>Outros</p>
-            <label for="idade-18">sim</label>
-            <input type="radio" name="idade" id="isedade-18" requeseie>
-            <label for="idade-18">nao</label>
-            <input type="radio" name="idade" id="isedade-18" requeseie>
-            <input type="text" name="outro" id="">
+        <div class="question" id="p3">
+            <b>3. Com que frequência usa a internet?*</b>
+            <div class="col">
+                <div>
+                    <input type="radio" name="uso-net" id="dia" requeseie>
+                    <label for="dia">Diariamente</label>
+                </div>
+                <div>
+                    <input type="radio" name="uso-net" id="semana" requeseie>
+                    <label for="semana">Algumas vezes por semana</label>
+                </div>
+                <div>
+                    <input type="radio" name="uso-net" id="mes" requeseie>
+                    <label for="mes">Algumas vezes por mês</label>
+                </div>
+                <div>
+                    <input type="radio" name="uso-net" id="raramente" requeseie>
+                    <label for="raramente">Raramente</label>
+                </div>
+                <div>
+                    <input type="radio" name="uso-net" id="nunca" requeseie>
+                    <label for="nunca">Nunca</label>
+                </div>
+            </div>
         </div>
 
-        <input clas="btn btn-primarry" type="submite" value="prox pagina">
-        <button>
-            <a href="/PCMsites/TP3/questionnaire_p2.html">submit</a>
-        </button>
+        <div class="question" id="p4">
+            <b>4. Indique, por ordem de preferência, os Web Browsers que mais utiliza. Pode indicar até 3.
+                Utilize valores de 1 a 3, sendo 1 o mais preferido e 3 o menos.**</b>
+            <div class="col">
+                <label for="preferencia-1">1ª preferiencia</label>
+                <select name="browser-1" id="browser-1">
+                    <option value="sem-preferencia">Sem prefencia</option>
+                    <option value="chrome">Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="mozilla-firefox">Mozilla Firefox</option>
+                    <option value="brave">Brave</option>
+                    <option value="vivaldi">Vivaldi</option>
+                    <option value="opera">Opera</option>
+                    <option value="internet-explorer">Internet Explorer</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="preferencia-2">2ª preferiencia</label>
+                <select name="browser-2" id="browser-2">
+                    <option value="sem-preferencia">Sem prefencia</option>
+                    <option value="chrome">Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="mozilla-firefox">Mozilla Firefox</option>
+                    <option value="brave">Brave</option>
+                    <option value="vivaldi">Vivaldi</option>
+                    <option value="opera">Opera</option>
+                    <option value="internet-explorer">Internet Explorer</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="preferencia-3">3ª preferiencia</label>
+                <select name="browser-3" id="browser-3">
+                    <option value="sem-preferencia">Sem prefencia</option>
+                    <option value="chrome">Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="mozilla-firefox">Mozilla Firefox</option>
+                    <option value="brave">Brave</option>
+                    <option value="vivaldi">Vivaldi</option>
+                    <option value="opera">Opera</option>
+                    <option value="internet-explorer">Internet Explorer</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="question" id="p5">
+            <b>5. Conhece outros sites de organização e pesquisa de imagens?</b>
+            <div class="row">
+                <div class="col-2">
+                    <input type="radio" name="outros-sites" id="outros-sites-n" requeseie>
+                    <label for="outros-sites-n">Não</label>
+                </div>
+                <div class="col-2">
+                    <input type="radio" name="outros-sites" id="outros-sites-s" requeseie>
+                    <label for="outros-sites-s">Sim</label>
+                </div>
+                <div class="col-8">
+                    <label for="outros-sites-s">Quais?</label>
+                    <input type="text" name="outro" id="outros-sites-text">
+                </div>
+            </div>
+        </div>
+        
+        <div id="continuar">
+            <a href="/PCMsites/TP3/questionnaire_p2.html">
+                <div class="btn btn-primary" type="submite" role="sucess">
+                    Continuar 
+                </div>
+            </a>
+        </div>
     </form>
 </body>
 
