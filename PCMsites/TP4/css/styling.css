@@ -1,0 +1,7 @@
+#canvas {
+    cursor:crosshair;
+}
+
+.buttons > * {
+    margin: 4px 8px;
+}
