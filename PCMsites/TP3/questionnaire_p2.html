@@ -15,7 +15,7 @@
     <h1>Questionário</h1>
     <h2>Tarefas</h2>
 
-    <form action="questionarie-p2" action="questionary">
+    <form name="questionarie-p2" action="questionary">
         <p>Por favor, realiza as seguintes tarefas e descreva-nos os resultados obtidos.</p>
 
         <div class="question" id="t1">
@@ -24,7 +24,7 @@
                 <!--outros-sites-s-->
                 <label for="exampleFormControlTextarea1" class="form-label">Explore o site livremente e indique se encontrou algum erro ou se sentiu alguma dificuldade em
                 perceber a funcionalidade das opções.</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" pattern="\w{2,150}" ></textarea> <!--TODO-->
             </div>
         </div>
 
@@ -69,12 +69,9 @@ observe os resultados.
             </div>
         </div>
 
-        <div id="continuar">
-            <a href="/PCMsites/TP3/questionnaire_p3.html">
-                <div class="btn btn-primary" type="submite" role="sucess">
-                    Continuar 
-                </div>
-            </a>
+        <div class="submit">
+            <input class="btn btn-success" type="submit" value="Continuar"
+                formaction="questionnaire_p3.html">
         </div>
 
     </form>

@@ -13,7 +13,7 @@
         <h1>Questionário</h1>
         <h2>Avaliação Global</h2>
 
-        <form action="questionarie-p3" action="questionary">
+        <form name="questionarie-p3" action="results.html">
             <div class="question" id="a1">
                 <label for="outros-sites-s">
                     <b>1. Para cada par de adjetivos, selecione a opção que melhor descreve a sua experiência de utilização deste site.</b>
@@ -50,8 +50,8 @@
                 </label>
                 <div class="row">
                     <div class="col-3">Mau</div>
-                    <div class="col-6 align-center">
-                        1 <input type="radio" name="a2-n" id="a2-1">
+                    <div class="col-6 align-center"> 
+                        1 <input type="radio" name="a2-n" id="a2-1" required> <!-- required TODO-->
                         2 <input type="radio" name="a2-n" id="a2-2">
                         3 <input type="radio" name="a2-n" id="a2-3">
                         4 <input type="radio" name="a2-n" id="a2-4">
@@ -146,12 +146,8 @@
                 </div>
             </div>
 
-            <div id="continuar">
-            <a href="/PCMsites/TP3/results.html">
-                <div class="btn btn-primary" type="submite" role="sucess">
-                    Terminar
-                </div>
-            </a>
+            <div class="submit">
+                <input class="btn btn-success" type="submit" value="Terminar" formaction="results.html">
             </div>
         </form>
     </body>
