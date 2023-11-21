@@ -9,55 +9,34 @@ const form_p3 = document.forms["questionarie-p3"];
 if(form_p1){
     form_p1.addEventListener("submit", (event) => {
         event.preventDefault();
-        let formData = new FormData(form_p1);
+        let formData = Object.fromEntries(new FormData(form_p1));
         let userId = localStorage.getItem("userId");
 
         localStorage.setItem("userId", userId);
-
         localStorage.setItem(userId, JSON.stringify(formData));
-
-        for (let pair of formData.entries()) {
-            data[pair[0]] = pair[1];
-        }
-        localStorage.setItem("form1", JSON.stringify(data));
-        window.location.href = "questionnaire_p2.html";
+        //window.location.href = "questionnaire_p2.html";
     })
 }
 
 if(form_p2){
     form_p2.addEventListener("submit", (event) => {
         event.preventDefault();
-        let formData = new FormData(form_p2);
+        let formData = Object.fromEntries(new FormData(form_p2));
         let userId = localStorage.getItem("userId");
-
-        localStorage.setItem("userId", userId);
-
-        localStorage.setItem(userId, JSON.stringify(formData));
-
-        for (let pair of formData.entries()) {
-            data[pair[0]] = pair[1];
-        }
-        localStorage.setItem("form2", JSON.stringify(data));
-        window.location.href = "questionnaire_p3.html";
-    })
+        let userData = JSON.parse(localStorage.getItem(userId));
+        localStorage.setItem(userId, JSON.stringify(Object.assign(userData, formData)));
+        //window.location.href = "questionnaire_p3.html";
+    });
 }
 
 if(form_p3){
     form_p3.addEventListener("submit", (event) => {
         event.preventDefault();
-        let formData = new FormData(form_p3);
+        let formData = Object.fromEntries(new FormData(form_p3));
         let userId = localStorage.getItem("userId");
+        let userData = JSON.parse(localStorage.getItem(userId));
 
-        localStorage.setItem("userId", userId);
-
-        localStorage.setItem(userId, JSON.stringify(formData));
-
-        for (let pair of formData.entries()) {
-            data[pair[0]] = pair[1];
-        }
-        localStorage.setItem("form3", JSON.stringify(data));
-        window.location.href = "questionnaire_p4.html";
+        localStorage.setItem(userId, JSON.stringify(Object.assign(userData, formData)));
+        //window.location.href = "questionnaire_p4.html";
     })
 }
-
-
