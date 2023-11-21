@@ -1,65 +1,45 @@
-function validateForm1(){
-  let form = document.getElementById("form1");
+function makeTableHead(table) {
+  let keys = JSON.parse(localStorage.getItem(localStorage.getItem("userId")));
+  let header = table.createTHead();
+  let row = header.insertRow();
 
-  let formIsValid = form.checkValidity();
-  if (formIsValid) {
-    let formData = new FormData(form);
-    let data = {};
-    for (let pair of formData.entries()) {
-      data[pair[0]] = pair[1];
-    }
-    localStorage.setItem("form1", JSON.stringify(data));
-    // go to /PCMsites/TP3/questionnaire_p1.html
-    window.location.href = "PCMsites/TP3/questionnaire_p1.html";
+  let th = document.createElement("th");
+  th.appendChild(document.createTextNode("User"));
+  row.appendChild(th);
+
+  for (const key in keys) {
+    th = document.createElement("th");
+    text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
   }
 }
 
+function makeTableRows(table) {
+  for (const userId in localStorage) {
+    userData = localStorage.getItem(userId);
+    if (userData == null || userId == "userId") continue;
+    parsedUserData = JSON.parse(userData);
+    console.log(parsedUserData);
+    let row = table.insertRow();
+    let td = document.createElement("td");
+    td.appendChild(document.createTextNode(userId));
+    row.appendChild(td);
+    for (const value in parsedUserData) {
+      let td = document.createElement("td");
 
-
-startQuestionnaire();
-saveData1();
-
- document.getElementById("myBtn").onclick = displayDate;
- function displayDate() {
-   document.getElementById("demo").innerHTML = Date();
- }
-
- element.addEventListener(click, function, false);
-
- document.getElementById("myBtn").addEventListener("click", displayDate); // ou removeEventListener
-
-/*
-function myDisplayer(something) {
-  document.getElementById("demo").innerHTML = something;
+      if (parsedUserData[value] == "") text = document.createTextNode("---");
+      else text = document.createTextNode(parsedUserData[value]);
+      td.appendChild(text);
+      row.appendChild(td);
+    }
+  }
 }
 
-function myCalculator(num1, num2, myCallback) {
-  let sum = num1 + num2;
-  myCallback(sum);
+function makeDataTable() {
+  let table = document.querySelector("table") || document.createElement("table");
+  makeTableHead(table);
+  makeTableRows(table);
 }
 
-
-(() => {
-  "use strict";
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
-
-*/
+window.onload = makeDataTable();

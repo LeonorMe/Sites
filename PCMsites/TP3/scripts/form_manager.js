@@ -28,11 +28,11 @@ function checkBrowser(elemento) {
 }
 
 function Write_Text() {
-  let x = document.forms["fdpessoais"]["outros-sites"].value;
+  let x = document.forms["fdpessoais"]["pimg"].value;
   if (x == "no") {
-    document.forms["fdpessoais"]["outros_pimg"].disabled = true;
-    document.forms["fdpessoais"]["outros_pimg"].value = "";
+    document.forms["fdpessoais"]["outros-pimg"].disabled = true;
+    document.forms["fdpessoais"]["outros-pimg"].value = "";
   } else {
-    document.forms["fdpessoais"]["outros_pimg"].disabled = false;
+    document.forms["fdpessoais"]["outros-pimg"].disabled = false;
   }
 }

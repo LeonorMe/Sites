@@ -160,12 +160,12 @@
             <b>5. Conhece outros sites de organização e pesquisa de imagens?</b>
             <div class="row">
                 <div class="col-2">
-                    <input type="radio" name="pimg" id="outros-sites-n" onclick="Write_Test()" checked>
-                    <label for="outros-sites-n">Não</label>
+                    <input type="radio" name="pimg" value="no" id="pimg-no" onclick="Write_Text()" checked>
+                    <label for="no">Não</label>
                 </div>
                 <div class="col-2">
-                    <input type="radio" name="pimg" id="outros-sites-s" onclick="Write_Test()">
-                    <label for="outros-sites-s">Sim</label>
+                    <input type="radio" name="pimg" value="yes"  id="pimg-yes" onclick="Write_Text()">
+                    <label for="yes">Sim</label>
                 </div>
                 <div class="col-8">
                     <label for="outros-pimg">Quais?</label>
@@ -183,7 +183,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script src="scripts/utilities.js"></script>
     <script src="scripts/questionnaire.js"></script>
     <script src="scripts/form_manager.js"></script>
 </body>
