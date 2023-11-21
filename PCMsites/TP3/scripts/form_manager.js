@@ -1,65 +1,38 @@
-function validateForm1(){
-  let form = document.getElementById("form1");
+// Questionario 1 - pergunta 4 e 5
 
-  let formIsValid = form.checkValidity();
-  if (formIsValid) {
-    let formData = new FormData(form);
-    let data = {};
-    for (let pair of formData.entries()) {
-      data[pair[0]] = pair[1];
-    }
-    localStorage.setItem("form1", JSON.stringify(data));
-    // go to /PCMsites/TP3/questionnaire_p1.html
-    window.location.href = "PCMsites/TP3/questionnaire_p1.html";
+function checkBrowser(elemento) {
+  let opcao1 = document.getElementById("preferencia-1");
+  let opcao2 = document.getElementById("preferencia-2");
+  let opcao3 = document.getElementById("preferencia-3");
+
+  if (
+    elemento.id.localeCompare("preferencia-1") !== 0 &&
+    elemento.value === opcao1.value
+  ) {
+    opcao1.value = "";
+  }
+
+  if (
+    elemento.id.localeCompare("preferencia-2") !== 0 &&
+    elemento.value === opcao2.value
+  ) {
+    opcao2.value = "";
+  }
+
+  if (
+    elemento.id.localeCompare("preferencia-3") !== 0 &&
+    elemento.value === opcao3.value
+  ) {
+    opcao3.value = "";
   }
 }
 
-
-
-startQuestionnaire();
-saveData1();
-
- document.getElementById("myBtn").onclick = displayDate;
- function displayDate() {
-   document.getElementById("demo").innerHTML = Date();
- }
-
- element.addEventListener(click, function, false);
-
- document.getElementById("myBtn").addEventListener("click", displayDate); // ou removeEventListener
-
-/*
-function myDisplayer(something) {
-  document.getElementById("demo").innerHTML = something;
+function Write_Text() {
+  let x = document.forms["fdpessoais"]["outros-sites"].value;
+  if (x == "no") {
+    document.forms["fdpessoais"]["outros_pimg"].disabled = true;
+    document.forms["fdpessoais"]["outros_pimg"].value = "";
+  } else {
+    document.forms["fdpessoais"]["outros_pimg"].disabled = false;
+  }
 }
-
-function myCalculator(num1, num2, myCallback) {
-  let sum = num1 + num2;
-  myCallback(sum);
-}
-
-
-(() => {
-  "use strict";
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
-
-*/
