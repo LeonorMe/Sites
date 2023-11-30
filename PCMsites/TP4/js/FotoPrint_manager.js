@@ -34,6 +34,7 @@ function main() {
     });
 
     /* TO DO */
+    // draw canvas rect, por um retangulo à volta da toolbar;  app.initilToolBar // incira os objs que aparecem na barra de cima
 }
 
 // Function to draw the canvas rectangle

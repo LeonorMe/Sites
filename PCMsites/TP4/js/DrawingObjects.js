@@ -389,10 +389,12 @@ class Heart extends DrawingObjects {
 }
 
 //TO DO: You may need to add more classes other than the following two (e.g., a third new object type and a text object).
-/*class Bear extends DrawingObjects
+class Bear extends DrawingObjects
 {
-    constructor () {
-        super(px, py, 'B');
+    constructor (px, py, w, h, c) {
+        super(px, py, c, 'B');
+        this.w = w;
+        this.h = h;
 
     }
 
@@ -402,26 +404,89 @@ class Heart extends DrawingObjects {
 
     draw (cnv) {
         const ctx = cnv.getContext('2d');
+        
+        let head = new Oval(this.posx + this.w/2, this.posy + this.h/2, this.w/2, 1, 1, 'black');
+        let hear 
+        
+        head.draw(cnv);
 
-
+        ctx.fill;
     }
 }
+
 
 class Ghost extends DrawingObjects
 {
-    constructor () {
-        super(px, py, 'G');
-
+    constructor (px, py, w, h, c) {
+        super(px, py, c, 'G');
+        this.w = w;
+        this.h = h;
     }
 
     mouseOver (mx, my) {
+        if(
+            my >= this.posy &&
+            my <= this.posy + this.h){
 
+        // detetar se o rato esta sobre
+        // ver se esta dentor do quadrado
+        const cnv = documento.createElemente("canvas");
+        const ctx = cnv.getcontext("2d");
+        this.draw(cnv); // desenhar o proproios gost num canvas vazio
+
+        if (ctx.isPointInInPath(mx, my)) {
+            // devoove se o pnoto esta nu ultimo path desenhaod no canvas
+            console.log;
+            return true;
+        }
+        // existe uma forma alternativa de se criar um path e ver se o ponto esta dentro
+        }
     }
 
     draw (cnv) {
         const ctx = cnv.getContext('2d');
 
+        const curveRadius = 20;
+        ctx.beginPath();
+        ctx.moveTo(this.posx+curveRadius, this.posy);
+        ctx.arcTo(this.posx+this.w, this.posy, 
+                this.posx+this.w, this.posy+this.h, 
+                curveRadius);
+        ctx.lineTo(this.posx+this.w, this.posy+this.h);
+        
+        const legW = this.w/6;
 
+        ctx.lineTo(this.posx + 5*legW, this.posy + 2/3 * this.h);
+        ctx.lineTo(this.posx + 4*legW, this.posy + this.h);
+        ctx.lineTo(this.posx + 3*legW, this.posy + 2/3 * this.h);
+        ctx.lineTo(this.posx + 2*legW, this.posy + this.h);
+        ctx.lineTo(this.posx + 1*legW, this.posy + 2/3 * this.h);
+        ctx.lineTo(this.posx, this.posy + this.h);
+
+        ctx.lineTo(this.posx, this.posy - this.h);
+        ctx.arcTo(this.posx, this.posy - this.h, 
+                this.posx+curveRadius, this.posy, 
+                curveRadius);
+        ctx.closePath();
+        ctx.fill;
     }
 }
+
+// TODO  fazer um boneco extra
+
+/* Cor
+<div>
+<input type="color" id="object-color"
+name="object-color" value"#ffffff" />
+<label for="object-color">Object Color</label> 
+</div>
+
+<div>
+<input type="color" id="background-color" name="background-color" value="#000" />
+<label for="background-color">Background Color</label>
+</div>
+
+//js
+documet.getelementById("onject-color").value
+
 */

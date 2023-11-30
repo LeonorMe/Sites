@@ -1,5 +1,7 @@
 'use strict';
 
+// TODO criar alguns metodos para gerir toolbar
+
 /**
  * Represents a drawing application that manages a pool of drawing objects.
  * @class
@@ -112,6 +114,7 @@ class FotoPrint {
         });
 
         /* TO DO */
+        //init toolbal
     }
 
     /**
