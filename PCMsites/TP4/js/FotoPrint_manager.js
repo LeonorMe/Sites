@@ -214,3 +214,15 @@ function updateCanvasSize() {
     drawCanvasRect(cnv);
     app.drawObj(cnv);
 }
+
+
+// add upload image, action upload(){const cnb, fileInput, const fileURL = wdindow
+// app.insertImage(fileURL); drawCanvas(cnv; app.drawOn«bjct(cnv;))
+
+// insert image(imagepath){
+    // const img
+    // this.ship
+//}
+
+
+// upload createImageUrl -> ver documentaçao

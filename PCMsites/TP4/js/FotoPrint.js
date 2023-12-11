@@ -42,6 +42,11 @@ class FotoPrint {
         this.shpinDrawing.insert(h);
 
         /* TO DO */
+        const b = new Bear(260, 45, 25, 1, 1, this.color);
+        this.shpinDrawing.insert(b);
+
+        const g = new Ghost(325, 30, 60, 60, this.color);
+        this.shpinDrawing.insert(g);
 
         // Create a picture (loaded from an image file) and insert it into the drawing pool.
         const p = new Picture(10, 100, 100, 100, 'imgs/allison1.jpg');
@@ -183,13 +188,14 @@ class Pool {
      */
     insert(obj) {
         // Insert an object into the pool if it's not full.
-        if (this.stuff.length < this.size) {
-            this.stuff.push(obj);
-        } else {
+        if (this.stuff.length >= this.size) {
             // Display an alert if the pool is full.
             alert('The pool is full: there isn\'t more memory space to include objects');
             /* TO DO: Consider alternative actions when the pool is full, such as removing the oldest object or expanding the pool size. */
+            // remove the oldest object
+            this.stuff.shift();
         }
+        this.stuff.push(obj);
     }
 
     /**
