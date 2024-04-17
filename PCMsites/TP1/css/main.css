@@ -1,0 +1,226 @@
+body {
+    font-family: 'Kalam', cursive;
+}
+
+.headerDiv{
+    background-color: green;
+    padding: 1%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.texto{
+
+}
+
+#slideshow{
+
+}
+
+#mainNav{
+    background-color: rgb(40, 40, 40);
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nameBox{
+    border: green 3px solid;
+    border-radius: 5px;
+    padding: 1%;
+    color: green;
+}
+
+#nameBox:hover{
+    background-color: white
+}
+
+a.nav-link{
+    color: white;
+}
+
+a.nav-link:hover {
+    background-color: green;
+    color:white;
+}
+
+a.dropdown-item{
+    color: white;
+}
+
+a.dropdown-item:hover {
+    background-color: green;
+    color: white;
+}
+
+.dropdown-divider{
+    width: 20%;
+    margin-left: 2%;
+    background-color: green;
+}
+
+#skills div{
+}
+
+#skills{
+    margin: 5%;
+}
+
+.overlay {
+    background-color: #3a923a77;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
+    z-index: 1;
+    pointer-events: none;
+}
+.carousel-item {
+    min-height: 60vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 95%);
+}
+
+.carouselText,
+.carouselButton {
+    z-index: 20;
+}
+
+.carouselButton{
+    border-radius: 5px;
+    border: white 3px solid;
+    color: white;
+}
+
+.carouselButton:hover{
+    background-color: white;
+    color: green;
+    position: absolute;
+    top: 58%;
+    animation-duration: 3ms;
+}
+
+.carouselText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    z-index: 20;
+}
+
+.menuBtn{
+    border: green 3px solid;
+    padding: 5px 7px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+
+.icon {
+    color: #ffffff;
+}
+
+.icon:hover {
+    color: #000000;
+}
+
+.skillsTitle{
+    text-transform: uppercase;
+}
+
+footer{
+    background-color: rgb(40, 40, 40);
+    color: white;
+    padding: 1%;
+}
+
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    background: #2a9134;
+    transition: all 0.5s ease;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px)
+}
+
+/* .change .bar1{
+    transform: rotate(45deg) translate(+5px, -6px);
+} */
+
+
+#goTop{
+    border: green 3px solid;
+    background-color: green;
+    margin: 3%;
+}
+
+.checkBoxGoTop{
+    position: absolute;
+}
+
+.skills-item {
+    /* inverter o clip-path na vertical */
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 50% 0, 100% 0);
+
+    background-color: rgb(40, 40, 40);
+}
+
+#about-me{
+    background-color: gray;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+    z-index: -1;
+    /*pointer-events: none;*/
+    padding: 10%;
+}
+
+#download-resume{
+    background-color: rgb(218, 234, 218);
+    color: green;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding:  1% 4%;
+    position: relative;
+}
+
+#download-resume:hover{
+    background-color: green;
+    color: white;
+    top: -10px;
+    transition: color 2s ease;
+}
+
+#progress-box{
+    border: #2a9134 3px solid;
+}
+
+.project-image{
+    opacity:0;
+}
+.project-image:hover{
+    opacity: 1;
+    transition: opacity 1s ease;
+    z-index: 2;
+}
+
+.card-img-top:hover{
+    background-color: rgba(0, 128, 0, 0.5);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    z-index: 1;
+    transform: scale(1.2);
+    transition: transform 1s ease-out;
+}

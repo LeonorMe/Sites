@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Avaliação Global</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/questionnaire.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <h1>Questionário</h1>
+        <h2>Avaliação Global</h2>
+
+        <form name="questionarie-p3" action="results.html">
+            <div class="question" id="a1">
+                <label for="outros-sites-s">
+                    <b>1. Para cada par de adjetivos, selecione a opção que melhor descreve a sua experiência de utilização deste site.</b>
+                </label>
+                <div class="row">
+                    <div class="col-3">Fantástica</div>
+                    <div class="col-7 align-center"><input type="range" name="fantastica-horrivel" id="fantastica-horrivel" min="1"
+                            max="7"></div>
+                    <div class="col-2">Horrível</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Estimulante</div>
+                    <div class="col-7 align-center"><input type="range" name="fantastica-horrivel" id="fantastica-horrivel" min="1"
+                            max="7"></div>
+                    <div class="col-2">Aborrecida</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Gratificante</div>
+                    <div class="col-7 align-center"><input type="range" name="fantastica-horrivel" id="fantastica-horrivel" min="1"
+                            max="7"></div>
+                    <div class="col-2">Frustrante</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Fácil</div>
+                    <div class="col-7 align-center"><input type="range" name="fantastica-horrivel" id="fantastica-horrivel" min="1"
+                            max="7"></div>
+                    <div class="col-2">Dfícil</div>
+                </div>
+            </div>
+
+            <div class="question" id="a2">
+                <label for="outros-sites-s">
+                    <b>2. Como classifica o resultado obtido pela pesquisa por Categoria (1 significa “Mau” e 5 significa “Excelente”)? *</b>
+                </label>
+                <div class="row">
+                    <div class="col-3">Mau</div>
+                    <div class="col-6 align-center"> 
+                        1 <input type="radio" name="a2-n" id="a2-1"> 
+                        2 <input type="radio" name="a2-n" id="a2-2">
+                        3 <input type="radio" name="a2-n" id="a2-3">
+                        4 <input type="radio" name="a2-n" id="a2-4">
+                        5 <input type="radio" name="a2-n" id="a2-5" required>
+                    </div>
+                    <div class="col-3">Excelente</div>
+                </div>
+            </div>
+
+            <div class="question" id="a3">
+                <label for="outros-sites-s">
+                    <b>3. Como classifica o resultado obtido pela pesquisa por Cor (1 significa “Mau” e 5 significa “Excelente”)? * </b>
+                </label>
+                <div class="row">
+                    <div class="col-3">Mau</div>
+                    <div class="col-6 align-center">
+                        1 <input type="radio" name="a3-n" id="a3-1">
+                        2 <input type="radio" name="a3-n" id="a3-2">
+                        3 <input type="radio" name="a3-n" id="a3-3">
+                        4 <input type="radio" name="a3-n" id="a3-4">
+                        5 <input type="radio" name="a3-n" id="a3-5" required>
+                    </div>
+                    <div class="col-3">Excelente</div>
+                </div>
+            </div>
+
+            <div class="question" id="a4">
+                <label for="outros-sites-s">
+                    <b>4. Como classifica o resultado obtido pela pesquisa por Imagens Semelhantes (1 significa “Mau” e 5 significa “Excelente”)? * </b>
+                </label>
+                <div class="row">
+                    <div class="col-3">Mau</div>
+                    <div class="col-6 align-center">
+                        1 <input type="radio" name="a4-n" id="a4-1">
+                        2 <input type="radio" name="a4-n" id="a4-2">
+                        3 <input type="radio" name="a4-n" id="a4-3">
+                        4 <input type="radio" name="a4-n" id="a4-4">
+                        5 <input type="radio" name="a4-n" id="a4-5" required>
+                    </div>
+                    <div class="col-3">Excelente</div>
+                </div>
+            </div>
+
+            <div class="question" id="a5">
+                <label for="outros-sites-s">
+                    <b>5. Como classifica a utilidade da pesquisa por Imagens Semelhantes (1 significa “Pouca” e 5 significa “Muita”)? * </b>
+                </label>
+                <div class="row">
+                    <div class="col-3">Mau</div>
+                    <div class="col-6 align-center">
+                        1 <input type="radio" name="a5-n" id="a5-1">
+                        2 <input type="radio" name="a5-n" id="a5-2">
+                        3 <input type="radio" name="a5-n" id="a5-3">
+                        4 <input type="radio" name="a5-n" id="a5-4">
+                        5 <input type="radio" name="a5-n" id="a5-5" required>
+                    </div>
+                    <div class="col-3">Excelente</div>
+                </div>
+            </div>
+
+            <div class="question" id="a6">
+                <label for="outros-sites-s">
+                    <b>6. Como classifica o sistema de navegação do site (1 significa “Mau” e 5 significa “Excelente”)? * </b>
+                </label>
+                <div class="row">
+                    <div class="col-3">Mau</div>
+                    <div class="col-6 align-center">
+                        1 <input type="radio" name="a6-n" id="a6-1">
+                        2 <input type="radio" name="a6-n" id="a6-2">
+                        3 <input type="radio" name="a6-n" id="a6-3">
+                        4 <input type="radio" name="a6-n" id="a6-4">
+                        5 <input type="radio" name="a6-n" id="a6-5" required>
+                    </div>
+                    <div class="col-3">Excelente</div>
+                </div>
+            </div>
+
+            <div class="question" id="a7">
+                <label for="outros-sites-s">
+                    <b>7. Como classifica o design do site (1 significa “Mau” e 5 significa “Excelente”)? * </b>
+                </label>
+                <div class="row">
+                    <div class="col-3">Mau</div>
+                    <div class="col-6 align-center">
+                        1 <input type="radio" name="a7-n" id="a7-1">
+                        2 <input type="radio" name="a7-n" id="a7-2">
+                        3 <input type="radio" name="a7-n" id="a7-3">
+                        4 <input type="radio" name="a7-n" id="a7-4">
+                        5 <input type="radio" name="a7-n" id="a7-5" required>
+                    </div>
+                    <div class="col-3">Excelente</div>
+                </div>
+            </div>
+
+            <div class="submit">
+                <input class="btn btn-success" type="submit" value="Terminar" formaction="results.html">
+            </div>
+        </form>
+    </body>
+</html>

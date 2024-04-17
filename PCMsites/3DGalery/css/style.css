@@ -1,0 +1,28 @@
+#galery{
+    background-color: rgb(211, 225, 195);
+    padding: 10px;
+    margin: 20px;
+}
+
+.project{
+    margin: 10px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    color: #42793c;
+}
+
+h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

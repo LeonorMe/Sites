@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/blackjack_style.css">
+  <script src="https://kit.fontawesome.com/0f73f9b0ad.js" crossorigin="anonymous"></script>
+  <title>Blackjack</title>
+</head>
+
+<body id="body">
+  <header class="container" id="header">
+    <div class="row align-items-center">
+      <div class="col-2">
+        <img src="/PCMsites/TP2/img/svg/black_joker.svg" onmouseover="logoAnimation()" alt="back_joker_card" class="logo" id="logo">
+      </div>
+      <div class="col-8 align-left">
+        <h1>Blackjack</h1>
+      </div>
+      <div class="col-2">
+        <a href="https://www.blackjackapprenticeship.com/how-to-play-blackjack/" target="_blank"> 
+          <i class="fa-solid fa-circle-info fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="game">
+      <article id="dealerInfo">
+        <h2>Dealer</h2>
+        <p id="dealer"></p>
+          <div class="row d-flex justify-content-center" id="dealerCards">
+            <!-- Add card with js -->
+          </div>
+      </article>
+
+      <article id="playerInfo">
+        <h2>Player</h2>
+        <p id="player"></p>
+          <div class="row d-flex justify-content-center" id = "playerCards">
+            <!-- Add card with js -->
+          </div>
+      </article>
+
+      <div id="buttons">
+        <h3 id="gameStatus"></h3>
+        <div class="row justify-content-center">
+          <div class="col">
+            <button class="btn btn-primary" id="card" type="button" onclick="player_new_card()">Card</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary" id="stand" type="button" onclick="dealer_finish()">Stand</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-success" id="new_game" type="button" onclick="new_game()" disabled>New Game</button>
+          </div>
+        </div>
+
+      </div>
+      
+    </section>
+    <!--
+    <section id="sec_debug">
+      <h2>Debug</h2>
+      <p id="debug">
+      </p>
+    </section>
+    -->
+  </main>
+
+  <footer class="container" id="footer">
+    <p>Created by Leonor Medeiros - 50758   |   PCM 2023</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="js/blackjack_object.js"></script>
+  <script src="js/blackjack_manager.js"></script>
+  <script>
+    window.onload = new_game();
+  </script>
+
+  <script>
+    function logoAnimation(){
+      document.getElementById("logo").style.transform = "rotate(45deg)";
+      document.getElementById("logo").style.transition = "transform 1.5s ease";
+      
+      document.getElementById("logo").src = '/PCMsites/TP2/img/svg/card_back.svg';
+      setTimeout(function () {
+        document.getElementById("logo").style.transform = "rotate(0deg)";
+        document.getElementById("logo").style.transition = "transform 1.5s ease";
+        document.getElementById("logo").src = '/PCMsites/TP2/img/svg/black_joker.svg';
+      }, 1500);
+    }
+  </script>
+</body>
+
+</html>

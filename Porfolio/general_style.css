@@ -1,0 +1,47 @@
+body{
+    background-color: bisque;
+}
+
+a{
+    /* background-color: rgb(99, 99, 99); */
+    border-radius: 20%;
+    color: rgb(145, 201, 62);
+    padding: 5%;
+}
+
+a:hover{
+    color: lightgreen;
+}
+
+#top-nav{
+    background-color: rgb(145, 201, 62);
+    color: black;
+}
+
+#side-nav{
+    background-color: rgb(91, 136, 24);
+    color: white;
+}
+
+article{
+    background-color: cornsilk;
+    color: rgb(255, 255, 255);
+}
+
+.row{
+    margin: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.col{
+    margin: 20%;
+}
+
+#profile-foto{
+    border-radius: 50%;
+    border-color: aquamarine solid 5px;
+    width: 50%;
+    height: 50%;
+}
