@@ -1,6 +1,7 @@
 body{
     background-color: rgb(31, 36, 28);
     padding: 0% 5%;
+    font-family: sans-serif;
 }
 
 h2{
@@ -78,4 +79,23 @@ footer{
 
 .project-image{
     border-radius: 2%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form #error{
+    color: brown;
+}
+
+form button{
+    background-color: rgb(91, 136, 24);
+    color: aliceblue;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
 }
