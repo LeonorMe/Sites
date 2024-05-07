@@ -1,3 +1,4 @@
+/*
 const name = document.getElementById('name')
 const email = document.getElementById('password')
 const subject = document.getElementById('subject')
@@ -27,7 +28,7 @@ form.addEventListener("send", (e) =>{
 })
 
 
-/*
+
 <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function sendEmail(){
