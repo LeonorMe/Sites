@@ -25,3 +25,24 @@ form.addEventListener("send", (e) =>{
         errorElement.innerText = messages.join(', ')
     }
 })
+
+
+/*
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "leono@gmail.com",
+                Password : "password",
+                To : 'leonomedeiros@gmail.com',
+                From : email.value,
+                Subject : "PORTFOLIO | " + subject.value,
+                Body : "FROM: " + name.vaue 
+                    + "<br> <br>" + message.value
+            }).then(
+            message => alert("Message sent succesfully.")
+            );
+        }
+    </script>
+*/

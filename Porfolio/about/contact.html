@@ -13,47 +13,20 @@
         
         <div id="error"></div>
 
-        <form id="form" action="/" method="GET" onsubmit="sendEmail(); reset(); return false;">
-            <div>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your Name" required>
-            </div>
-            <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="your00email@gmail.com" required>
-            </div>
-            <div>
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" placeholder="URGENT project sugestion | company" required>
-            </div>
-            <div>
-                <div>
-                    <label for="message">Message</label>
-                </div>
-                <textarea id="message" name="message" rows="5" cols="40%" placeholder="Please write your message. Best regards, Name" required></textarea>
-            </div>
+        <!--<form id="form" action="/" method="GET" onsubmit="sendEmail(); reset(); return false;"></form>-->
+        <form action="https://formsubmit.co/leonomedeiros@gmail.com" method="POST">
 
-            <div>
-                <button type="send">Send</button>
-            </div>
+            <input id="name" type="text" name="name" placeholder="Your Name" required>
+            <input id="email" type="email" name="email" placeholder="youremail@gmail.com" required>
+            <input id="subject" type="text" name="subject"  placeholder="subject | company" required>
+            <textarea id="message" name="message" rows="5" cols="40%" placeholder="Please write your message. Best regards, Name" required></textarea>
+            
+            <input type="hidden" name="_next" value="https://leonorme.github.io/thankyou.html">
+            <input type="hidden" name="_autoresponse" value="Thank you for your contact. I'll respond to your email as soon as I can.">
+
+            <button type="submit">Send</button>
         </form>
+
     </article>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "leono@gmail.com",
-                Password : "password",
-                To : 'leonomedeiros@gmail.com',
-                From : email.value,
-                Subject : "PORTFOLIO | " + subject.value,
-                Body : "FROM: " + name.vaue 
-                    + "<br> <br>" + message.value
-            }).then(
-            message => alert("Message sent succesfully.")
-            );
-        }
-    </script>
 </body>
 </html>
