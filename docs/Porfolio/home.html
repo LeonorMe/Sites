@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/0f73f9b0ad.js"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles/general_style.css">
+        <title>LM Portfolio</title>
+    </head>
+    <body>
+        <!-- Navbar Top -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="./home.html">
+                <img src="./assets/images/logo.png"
+                    alt="logo" width="50px"></a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="./projects/zone_projects.html">Projects</a>
+                    <a class="nav-item nav-link active" href="./about/zone_about.html">About</a>
+                    <a class="nav-item nav-link active" href="./login/login.html">Log in</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Carousel wrapper -->
+        <div
+        id="carouselBasicExample"
+        data-mdb-carousel-init class="carousel slide carousel-fade"
+        data-mdb-ride="carousel"
+        >
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button
+            type="button"
+            data-mdb-target="#carouselBasicExample"
+            data-mdb-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+            ></button>
+            <button
+            type="button"
+            data-mdb-target="#carouselBasicExample"
+            data-mdb-slide-to="1"
+            aria-label="Slide 2"
+            ></button>
+            <button
+            type="button"
+            data-mdb-target="#carouselBasicExample"
+            data-mdb-slide-to="2"
+            aria-label="Slide 3"
+            ></button>
+        </div>
+
+        <!-- Inner -->
+        <div class="carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+            <img
+                src="/images/pic03.jpg"
+                class="d-block w-100"
+                alt="Sunset Over the City"
+            />
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Welcome!</h5>
+                <p>
+                My name is Leonor Medeiros
+                </p>
+            </div>
+            </div>
+
+            <!-- Single item -->
+            <div class="carousel-item">
+            <img
+                src="/images/pic02.jpg"
+                class="d-block w-100"
+                alt="Canyon at Nigh"
+            />
+            <div class="carousel-caption d-none d-md-block">
+                <h5>I'm from Portugal</h5>
+                <p>
+                    Currently studing Informatics and Multimedia Engineering in Lisbon 
+                    and I love 3D art and programming.
+                </p>
+            </div>
+            </div>
+
+            <!-- Single item -->
+            <div class="carousel-item">
+            <img
+                src="/images/pic01.jpg"
+                class="d-block w-100"
+                alt="Cliff Above a Stormy Sea"
+            />
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Let me get to know you</h5>
+                <p>
+                Fell free to look at my projects and get in contact with me.
+                </p>
+            </div>
+            </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-mdb-target="#carouselBasicExample"
+            data-mdb-slide="prev"
+        >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-mdb-target="#carouselBasicExample"
+            data-mdb-slide="next"
+        >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        <!-- Carousel wrapper -->
+
+        <!-- Top projects -->
+        <!-- Carousel wrapper -->
+        <div
+        id="carouselMultiItemExample"
+        data-mdb-carousel-init class="carousel slide carousel-dark text-center"
+        data-mdb-ride="carousel"
+        >
+        <!-- Controls -->
+        <div class="d-flex justify-content-center mb-4">
+            <button
+            class="carousel-control-prev position-relative"
+            type="button"
+            data-mdb-target="#carouselMultiItemExample"
+            data-mdb-slide="prev"
+            >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+            class="carousel-control-next position-relative"
+            type="button"
+            data-mdb-target="#carouselMultiItemExample"
+            data-mdb-slide="next"
+            >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Inner -->
+        <div class="carousel-inner py-4">
+            <!-- Single item -->
+            <div class="carousel-item active">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp"
+                        class="card-img-top"
+                        alt="Waterfall"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
+                        class="card-img-top"
+                        alt="Sunset Over the Sea"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/183.webp"
+                        class="card-img-top"
+                        alt="Sunset over the Sea"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Single item -->
+            <div class="carousel-item">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
+                        class="card-img-top"
+                        alt="Fissure in Sandstone"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/185.webp"
+                        class="card-img-top"
+                        alt="Storm Clouds"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/186.webp"
+                        class="card-img-top"
+                        alt="Hot Air Balloons"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Single item -->
+            <div class="carousel-item">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp"
+                        class="card-img-top"
+                        alt="Peaks Against the Starry Sky"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp"
+                        class="card-img-top"
+                        alt="Bridge Over Water"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                    <div class="card">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp"
+                        class="card-img-top"
+                        alt="Purbeck Heritage Coast"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                        </p>
+                        <a href="#!" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">Button</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Inner -->
+        </div>
+        <!-- Carousel wrapper -->
+    </body>
+</html>

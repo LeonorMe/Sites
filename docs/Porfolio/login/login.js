@@ -21,4 +21,10 @@ form.addEventListener("submit", (e) =>{
         e.preventDefault()
         errorElement.innerText = messages.join(', ')
     }
+
+    if(name.value == "adminLM" && password.value == "0000"){
+        // go to restritec page
+        window.location.replace("https://leonorme.github.io/portfolio/restricted/restrited_home.html"
+        );
+    }
 })
