@@ -1,0 +1,18 @@
+/*Portfolio page*/
+
+.col7 {
+    float: left;
+    width: 14%;
+}
+
+img{
+    width: 150px;
+}
+
+/**/
+img.logo {
+    height: 80px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
