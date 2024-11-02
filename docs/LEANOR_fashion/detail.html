@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Collection</title>
+        <title>Collection Detail</title>
         <link rel="stylesheet" href="assets/styles/styles.css">
         <link rel="stylesheet" href="assets/styles/style_portfolio.css">
     </head>
@@ -22,8 +22,17 @@
             </div>
         </header>
         <main>
-            <h2>Nature elements</h2>
-            <div class="listColection">
+            <div class="designDetails">
+                <div class="image_a">
+                    <img>
+                </div>
+                <div class="image">
+                    <img>
+                </div>
+                <div>
+                    <h3 class="nome"></h3>
+                    <div class="descricao"></div>
+                </div>
                 <!-- Filled by the srcipt at the bottom -->
             </div>
         </main>
@@ -39,21 +48,24 @@
             .then(response => response.json())
             .then(data => {
                 designs = data;
-                addDataToHTML();
+                showDetail();
             })
-            let listColection = document.querySelector('.listColection');
-            
-            function addDataToHTML(){
-                designs.forEach(design => {
-                    let newDesign = document.createElement('a');
-                    newDesign.href = 'detail.html?id=' + design.id;
-                    newDesign.classList.add('item');
-                    newDesign.innerHTML =`
-                        <img src="${design.image}" alt="image_${design.id}">
-                        `;
-                    listColection.appendChild(newDesign)
-                })
+            function showDetail(){
+                let detail = document.querySelector('.designDetails');
+                let designId = new URLSearchParams(window.location.search).get('id');
+                let thisDesign = designs.filter(value => {
+                    return value.id == designId;
+                })[0];
+                if(!thisDesign){
+                    window.location.href = "/";
+                }             
+                detail.querySelector('.image_a img').src = thisDesign.image_a;
+                detail.querySelector('.image img').src = thisDesign.image;
+                detail.querySelector('.nome').innerHTML = thisDesign.name;
+                detail.querySelector('.descricao').innerHTML = thisDesign.description;
+
             }
+            
         </script>
     </body>
 </html>

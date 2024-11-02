@@ -10,6 +10,8 @@ body{
     padding: 0;
 }
 
+
+
 /*acording to design*/
 header{
     background-color: #ebe8e8;
@@ -230,6 +232,15 @@ header a.active {
     .header-right {
         float: none;
     }
+}
+
+/*---- Detail ---*/
+
+.designDetails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /***/

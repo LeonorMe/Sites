@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Photo List</div>
+        <div class="listPhoto"></div>
+    </div>
+
+    <script>
+        let photos = null;
+        fetch('images.json')
+        .then(response => response.json())
+        .then(data => {
+            photos = data;
+            console.log(photos)
+            addDataToHTML();
+        })
+        let listPhoto = document.querySelector('.listPhoto');
+        function addDataToHTML(){
+            photos.forEach(photo => {
+                let newPhoto = document.createElement('a');
+                newPhoto.href = 'detail.html?id=' + photo.id;
+                newPhoto.classList.add('item');
+                newPhoto.innerHTML = `
+                    <img src="images/${photo.image}">
+                    <h3>${photo.titulo}</h3>
+                    <div style="background-color: rgb${photo.cores}; font-size: small; padding: 10%; color: #fff"> ${photo.cores} </div>
+                `;
+            
+                listPhoto.appendChild(newPhoto);
+            })
+        }
+    </script>
+
+    <!--
+    <header>
+        <button>Add you photo</button>
+    </header>
+    <body>
+        <div class="row">
+            <div class="col"> <button> < </button></div>
+            <div class="col" id="images_small">
+                
+            </div>
+            <div class="col"> <button> > </button></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="image_big">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div id="colors">
+
+                </div>
+            </div>
+        </div>
+        -->
+    </body>
+</body>
+</html>
