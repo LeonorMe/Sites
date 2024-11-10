@@ -1,10 +1,10 @@
 [
     {
-        id: 0,
-        name: "Natural Elements",
-        description: "Inspiered by simplicity in nature",
-        tags: ["nature", "simplicity"],
-        designs: [
+        "id": 0,
+        "name": "Natural Elements",
+        "description": "Inspiered by simplicity in nature",
+        "tags": ["nature", "simplicity"],
+        "designs": [
             {
                 id: 0,
                 name: "Aqua",

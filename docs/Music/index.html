@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miusic</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>MiUSIC</h1>
+    <!--audio controls loop>
+        <source src="./sounds/mountain_water_3.mp3" type="audio/mpeg">
+    </audio-->
+
+    <div class="grid-list" id="musics-list">
+    </div>
+
+    <footer>
+        <div>
+            <button onclick="document.querySelector('.controls').play()">Play</button>
+            <button onclick="document.querySelector('.controls').pause()">Pause</button>
+        </div>
+    </footer>
+    
+    <script src="getMusics.js"></script>
+</body>
+</html>
