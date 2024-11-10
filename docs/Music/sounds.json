@@ -1,65 +1,50 @@
 [
     {
         "id": "1",
-        "name": "Mountain water 3",
-        "url": "sounds/mountain_water_3.mp3", 
+        "name": "Mountain water 1",
+        "url": "sounds/mountain_water_1.mp3", 
         "artist": "LM",
         "album": "Salzburg",
         "genre": "ambient_music",
         "year": "2024",
-        "cover": "covers/mountain_water.jpg",
-        "duration": "0:30",
+        "cover": "covers/mountain_water_1.jpg",
+        "duration": "1:14",
         "lyrics": "[water running]"
     },
     {
-        "id": "1",
-        "name": "Mountain water 3",
-        "url": "sounds/mountain_water_3.mp3", 
+        "id": "2",
+        "name": "Mountain water 2",
+        "url": "sounds/mountain_water_2.mp3", 
         "artist": "LM",
         "album": "Salzburg",
         "genre": "ambient_music",
         "year": "2024",
-        "cover": "covers/mountain_water.jpg",
-        "duration": "0:30",
+        "cover": "covers/mountain_water_2.jpg",
+        "duration": "0:52",
         "lyrics": "[water running]"
-    }
-    ,
+    },
     {
-        "id": "1",
+        "id": "3",
         "name": "Mountain water 3",
         "url": "sounds/mountain_water_3.mp3", 
         "artist": "LM",
         "album": "Salzburg",
         "genre": "ambient_music",
         "year": "2024",
-        "cover": "covers/mountain_water.jpg",
-        "duration": "0:30",
+        "cover": "covers/mountain_water_3.jpg",
+        "duration": "0:34",
         "lyrics": "[water running]"
-    }
-    ,
+    },
     {
-        "id": "1",
-        "name": "Mountain water 3",
-        "url": "sounds/mountain_water_3.mp3", 
+        "id": "4",
+        "name": "Cave sound",
+        "url": "sounds/cave_sound.mp3", 
         "artist": "LM",
-        "album": "Salzburg",
+        "album": "Lubliana",
         "genre": "ambient_music",
         "year": "2024",
-        "cover": "covers/mountain_water.jpg",
-        "duration": "0:30",
-        "lyrics": "[water running]"
-    }
-    ,
-    {
-        "id": "1",
-        "name": "Mountain water 3",
-        "url": "sounds/mountain_water_3.mp3", 
-        "artist": "LM",
-        "album": "Salzburg",
-        "genre": "ambient_music",
-        "year": "2024",
-        "cover": "covers/mountain_water.jpg",
-        "duration": "0:30",
-        "lyrics": "[water running]"
+        "cover": "covers/cave.jpg",
+        "duration": "0:57",
+        "lyrics": "[cave sounds]"
     }
 ]
