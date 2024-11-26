@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 0,
+        "title" : "Color Picker",
+        "type" : "website",
+        "tec" : "HTML, CSS, JS",
+        "date" : "nov 2024",
+        "imageCover" : "./assets/images/website-color-picker.png",
+        "note" : "Personal project. Website to generate random color palette.",
+        "link" : "http://127.0.0.1:5500/docs/ColorPicker/index.html"
+    },
+    {
+        "id" : 1,
+        "title" : "MiUSIC",
+        "type" : "website",
+        "tec" : "HTML, CSS, JS",
+        "date" : "oct 2024",
+        "imageCover" : "./assets/images/website-miusic.png",
+        "note" : "Personal project. Website to listen to relaxing sounds of nature in the background.",
+        "link": "http://127.0.0.1:5500/docs/Music/index.html"
+    
+    },
+    {
+        "id" : 2,
+        "title" : "Color Picker",
+        "type" : "website",
+        "tec" : "HTML, CSS, JS",
+        "date" : "nov 2024",
+        "imageCover" : "./assets/images/website-color-picker.png",
+        "note" : "Personal project. Website to generate random color pallete."
+    }
+]
