@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TODO</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button class="color-mode" id="sun"></button>
+
+        <h1>TODO</h1>
+
+        <h3>Today's list</h3>
+
+        <div class="list" id="task-list">
+            <div class="task">
+                <button class="check checked" name="-1"></button>
+                <p id="-1" class="text-checked">Task done</p>
+            </div>
+            <div class="task">
+                <button class="check no-check" name="0"></button>
+                <p id="0" class="text-no-check">Add new Task</p>
+            </div>
+        </div>
+
+        <br>
+        <p>You can do it :)</p>
+
+        <footer>
+            <form action="POST" id="form-new-task">
+                <input type="text" name="new-task" id="new-task">
+                <button type="submit" id="add">Add</button>
+            </form>
+        </footer>
+
+        <div class="footer-logo-fixed">
+            <a href="../index.html">
+                <img src="../logo.png" alt="LM-logo">
+            </a>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

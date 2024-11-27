@@ -1,6 +1,16 @@
 [
     {
-        "id" : 0,
+        "id" : 3,
+        "title" : "TODO list",
+        "type" : "website",
+        "tec" : "HTML, CSS, JS",
+        "date" : "nov 2024",
+        "imageCover" : "./assets/images/website-todo.png",
+        "note" : "Personal project. Website to make temporary todo lists, was a button to change website color palette.",
+        "link" : "https://leonorme.github.io/Todo/index.html"
+    },
+    {
+        "id" : 2,
         "title" : "Color Picker",
         "type" : "website",
         "tec" : "HTML, CSS, JS",
@@ -21,7 +31,7 @@
     
     },
     {
-        "id" : 2,
+        "id" : 0,
         "title" : "LEANOR fashion design",
         "type" : "website",
         "tec" : "HTML, CSS, JS",

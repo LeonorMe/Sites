@@ -1,0 +1,157 @@
+/*
+Dia
+rgb(112, 155, 50) rgb(166, 179, 16) rgb(220, 184, 91) rgb(222, 88, 126) rgb(107, 62, 236)
+
+Noite
+rgb(44, 70, 62) rgb(102, 189, 195) rgb(221, 103, 80) rgb(23, 58, 145) rgb(174, 72, 196)
+
+Vermelho
+rgb(215, 97, 64) rgb(209, 70, 48) rgb(178, 151, 90) rgb(85, 62, 33) rgb(132, 50, 45)
+
+Azul
+rgb(5, 193, 234) rgb(74, 57, 131) rgb(89, 201, 40) rgb(2, 83, 122) rgb(8, 37, 228)
+*/
+
+body {
+    margin: 0;
+    padding: 10vh 20vw;
+    font-family:cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    background-color:  rgb(239, 239, 239); 
+    color: rgb(0, 0, 0);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 20px;
+    box-shadow: -2px 1px 2px rgba(76, 34, 92, 0.49) inset;
+    transition: transform .2s ease-in-out;
+}
+
+.check:hover {
+    transform: scale(1.1);
+}
+
+.no-check {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.checked {
+    background-color: black;
+    box-shadow: none;
+}
+
+.text-checked {
+    text-decoration: line-through;
+}
+
+.text-no-check {
+    text-decoration: none;
+}
+
+.color-mode{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    transition: transform .2s ease-in-out;
+}
+
+.color-mode:hover{
+    transform: scale(1.1);
+}
+
+#sun{
+    background-color: gold;
+}
+
+#moon{
+    background-color: silver;
+}
+
+#red{
+    background-color: crimson;
+}
+
+#blue{
+    background-color: navy;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: black;
+}
+
+form {
+    padding: 3% 0 0 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+input {
+    border-radius: 20px;
+    border: 0;
+    font-size: 1.1rem;
+    padding: 2%;
+    width: 50%;
+    box-shadow: -2px 2px 2px rgba(76, 34, 92, 0.49) inset;
+    font-family: cursive;
+}
+
+form button{
+    font-family: cursive;
+    font-size: larger;
+    font-weight: 600;
+    padding: 2% 3%;
+    background-color: lightgray; /*rgb(127, 180, 3)*/
+    border: 0;
+    border-radius: 20px;
+    box-shadow: -2px 2px 2px rgba(76, 34, 92, 0.49);
+    transition: transform .2s ease-in-out;
+}
+
+form button:hover{
+    transform: scale(1.1);
+}
+
+.footer-logo-fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.footer-logo-fixed img {
+    width: 50px;
+    height: 50px;
+}
