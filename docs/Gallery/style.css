@@ -1,0 +1,87 @@
+body {
+    background-color: #171717;
+    color: #eeecec;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 3vh 15vw;
+}
+
+header {
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+header a {
+    color: #eeecec;
+    text-decoration: none;
+}
+
+nav a{
+    text-decoration: underline;
+}
+
+nav a:hover{
+    text-decoration: line-through;
+}
+
+.projects-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px ;
+    margin-top: 20px;
+}
+
+.project{
+    display: flex;
+    gap: 3%;
+    width: 200px;
+    /*border-color: rgb(90, 101, 62);
+    border-style: solid;*/
+}
+
+
+.project img{
+    /*width: 100%;*/
+    width: 100%;
+    transition: all .2s ease-in-out;
+}
+
+.project a:hover img{
+    width: 110%;
+    transform: scale(1);
+    box-shadow: 0px 0px 3px 3px #434242;
+}
+
+.project h3{
+    margin: 0;
+}
+
+.project p{
+    margin: 0;
+}
+
+.project a {
+    color: #eeecec;
+}
+
+.project a:hover {
+    color: #eeecec;
+    text-decoration: line-through;
+}
+
+.footer-logo-fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.footer-logo-fixed img {
+    width: 50px;
+    height: 50px;
+}
