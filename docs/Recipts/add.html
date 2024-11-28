@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+</head>
+<body>
+    <h1>Add</h1>
+    <form action="" method="POST" id="new_recipt">
+        <label for="name">Name of recipt:</label><br>
+        <input type="text" name="name" required>
+    
+        <br><br>
+        <button type="submit">Create</button>
+    </form>
+</body>
+
+<script>
+    const fRecipt = document.getElementById("new_recipt");
+
+    reciptsDB = 
+    
+    fRecipt.addEventListener('submit', event =>{
+        event.preventDefault();
+        
+        const reciptData = new FormData(fRecipt);
+        
+        let id = 0 
+        reciptData.append('id', id)
+        
+        const reciptOBJ = Object.fromEntries(reciptData)
+        JSON.stringify(reciptOBJ)
+    })
+
+</script>
+</html>
