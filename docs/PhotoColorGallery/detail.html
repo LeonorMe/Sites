@@ -38,7 +38,7 @@
             let detail = document.querySelector('.detail');
             let photoId = new URLSearchParams(window.location.search).get('id');
             let thisPhoto = photos.filter(value =>{
-                return value.id == photoId;
+                return value.id == photoId
             }
             )[0];
             if(!thisPhoto){

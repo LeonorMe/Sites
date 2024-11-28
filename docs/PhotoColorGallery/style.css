@@ -1,0 +1,117 @@
+body{
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+
+.container{
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+}
+.title{
+    font-size: xx-large;
+    padding: 20px 0;
+}
+.listPhoto .item img{
+    width: 90%;
+    filter: drop-shadow(0 10px 5px #30262d9d);
+}
+
+.listPhoto{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.listPhoto .item{
+    background-color: none;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listPhoto .item h3{
+    font-size: large;
+    font-weight: 500;
+}
+
+.listPhoto .item .cor{
+    font-size: small;
+    margin: 5%;
+    padding: 5%;
+}
+
+/*detail page*/
+.detail{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    text-align: left;
+}
+.detail .image img{
+    width: 90%;
+}
+.detail .image{
+    position: relative;
+}
+.detail .image::before{
+    margin: 10% 0 0 5%;
+    position: absolute;
+    width: 290px;
+    height: 200px;
+    content: '';
+    background-color: #94817733;
+    z-index: -1;
+    /*
+    border-radios: px;
+    left: calc(50% - 150px);
+    top: 50px;
+    */
+}
+
+.detail .name{
+    font-size: large;
+    padding: 40px 0 0 0;
+    margin: 0 0 10px 0;
+}
+
+.detail .buttons{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.detail .buttons button{
+    background-color: #eee;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+footer{
+    margin-top: 20vh;
+    margin-left: 5vw;
+}
+footer a{
+    background-color: #d58585;
+    padding: 15px 20px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .listPhoto{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and(max-width: 768px) {
+    .listPhoto{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
