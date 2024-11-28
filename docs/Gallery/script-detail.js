@@ -14,7 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "/";
         }
 
-        document.querySelector(".image-container img").src = thisImg.img;
+        imageElement = document.createElement('img')
+        imageElement.src = thisImg.img;
+        
+        /*
+        if (imageElement.naturalHeight <= imageElement.naturalWidth){
+            // horizontal image or square
+            //width: 100%;
+            //height: 80vh;
+            imageElement.style.maxWidth = "100%";
+            imageElement.style.maxHeight = "70vh";
+        }
+        */
+
+        imagePlace = document.querySelector(".image-container");
+        imagePlace.appendChild(imageElement);
         
         let description = thisImg.desc != undefined ? thisImg.desc : "";
         let name = thisImg.name != `image_${thisImg.id}` ? thisImg.name : "";
@@ -39,3 +53,4 @@ btnBack.addEventListener('click', () => {
         nextId += TOTALids;
     btnBack.href = "detail.html?id=" + nextId;
 });
+
