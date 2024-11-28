@@ -1,3 +1,7 @@
+header {
+    margin-bottom: 2vw;
+}
+
 article {
     background-color: rgba(0, 0, 0, 0);
     display: grid;

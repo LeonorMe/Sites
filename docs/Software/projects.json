@@ -1,5 +1,15 @@
 [
     {
+        "id" : 4,
+        "title" : "Gallery",
+        "type" : "website",
+        "tec" : "HTML, CSS, JS",
+        "date" : "nov 2024",
+        "imageCover" : "./assets/images/website-gallery.png",
+        "note" : "Personal project. Website to show in grid and detail multiple images with a drescription.",
+        "link" : "https://leonorme.github.io/Gallery/index.html"
+    },
+    {
         "id" : 3,
         "title" : "TODO list",
         "type" : "website",
