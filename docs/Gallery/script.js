@@ -23,3 +23,57 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Error loading images:", error));
 });
+
+var activeColor = 'rgba(23, 151, 215, 0.5)';
+
+function randColor(){
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    return `rgba(${red}, ${green}, ${blue}, 0.5)`;
+}
+
+let changeColor = document.querySelector(".change-color");
+changeColor.addEventListener('click', ()=>{
+    activeColor = randColor();
+    changeColor.style.backgroundColor = activeColor;
+})
+
+/*
+document.addEventListener('click', (e) => {
+    //console.log("mouse location:", e.clientX, e.clientY);
+    // TODO
+})*/
+
+document.onmousemove = function (e) {
+    draw(e);
+};
+
+function draw(e){
+    _Xpos = e.clientY;
+    _Ypos = e.clientX;
+
+    const elem = document.createElement("div");
+    elem.classList = "mouse-animation";
+    elem.style.boxShadow = `0px 0px 2px 2px ${activeColor}`;
+    elem.style.top = _Xpos + "px";
+    elem.style.left = _Ypos + "px";
+    
+    document.querySelector("body").appendChild(elem);
+    
+    setTimeout(() => {
+        elem.style.opacity = '0.75';
+    }, "250");
+
+    setTimeout(() => {
+        elem.style.opacity = "0.5";
+    }, "250");
+
+    setTimeout(() => {
+        elem.style.opacity = "0.25";
+    }, "250");
+
+    setTimeout(() => {
+        elem.remove();
+    }, "500");
+}
