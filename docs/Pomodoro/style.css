@@ -1,0 +1,112 @@
+/*rgb(119, 116, 101) rgb(50, 162, 122) rgb(208, 176, 11) rgb(188, 214, 178) rgb(36, 72, 80)*/
+
+body {
+    background-color: rgb(36, 72, 80);
+    color: rgb(188, 214, 178);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 10vh 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+    gap: 5vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-shadow: 2px 4px 4px rgba(20, 12, 33, 0.49);
+    font-family: "Chewy", system-ui;
+    font-weight: 500;
+    font-size: 3em;
+    margin: 0;
+}
+
+p {
+    color: rgb(188, 214, 178);
+}
+
+.show-time {
+    color: rgb(188, 214, 178);
+    font-size: 5em;
+    margin-top: 5%;
+}
+
+form {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px rgba(20, 12, 33, 0.49) inset;
+    color: rgb(36, 72, 80);
+    background-color: rgb(188, 214, 178);
+}
+
+.start {
+    background-color: rgb(208, 176, 11);
+}
+
+.start:hover {
+    background-color: rgb(50, 162, 122);
+}
+
+.stop {
+    background-color: rgb(50, 162, 122);
+}
+
+.stop:hover {
+    background-color: rgb(208, 176, 11);
+}
+
+button {
+    color: rgb(36, 72, 80);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px rgba(20, 12, 33, 0.49);
+}
+
+button:hover {
+    box-shadow: 2px 4px 4px rgba(20, 12, 33, 0.49) inset;
+}
+
+.footer-logo-fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.footer-logo-fixed img {
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Pomodoro</h1>
+        <p>Balance between work and rest.</p>
+    </header>
+
+    <div class="show-time">45:00</div>
+
+    <button class="start">Start</button>
+
+    <form method="get" action="javascript:newTime()">
+        <div class="row">
+            <div class="col">
+                <label for="work-time">Work</label>
+                <input name="work-time" type="time" value="00:45" id="work-time">
+            </div>
+            <div class="col">
+                <label for="rest-time">Rest</label>
+                <input name="rest-time" type="time" value="00:10" id="rest-time">
+            </div>
+        </div>
+
+        <div class="row">
+            <button type="submit" class="update">Update</button>
+        </div>
+    </form>
+
+    <div class="footer-logo-fixed">
+        <a href="../index.html">
+        <img src="../logo.png" alt="LM-logo">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
