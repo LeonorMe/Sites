@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1, 
+        "title": "A Ceia de Plástico", 
+        "autor": "Leonor Medeiros", 
+        "date" : "2022",
+        "type": "Theater, Drama, Fiction",
+        "desc": "Cá estamos nós outra vez, prontos para mais uma época natalícia cheia de dramas e intrigas familiares tão característicos e queridos a todas as famílias! <br> Feliz Natal", 
+        "cover": "img/A_Ceia_de_Plastico.png", 
+        "backCover": "img/A_Ceia_de_Plastico-back.png",
+        "pages": "text/A_Ceia_de_Plastico.txt"
+        },
+    {
+        "id": 0, 
+        "title": "O Roubo da Clarinha", 
+        "autor": "Leonor Medeiros", 
+        "date" : "2016",
+        "type": "Theater, Action, Fiction",
+        "desc": "Quando a boneca mais desejada do mundo está sob o olhar atento de uma quadrilha talentosa...", 
+        "cover": "img/O_Roubo_da_Clarinha.png", 
+        "backCover": "img/O_Roubo_da_Clarinha-back.png",
+        "pages": "text/O_Roubo_da_Clarinha.txt"
+    }
+]
