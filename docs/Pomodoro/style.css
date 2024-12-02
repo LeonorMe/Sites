@@ -1,8 +1,27 @@
-/*rgb(119, 116, 101) rgb(50, 162, 122) rgb(208, 176, 11) rgb(188, 214, 178) rgb(36, 72, 80)*/
+/* rgb(119, 116, 101) rgb(50, 162, 122) rgb(208, 176, 11) rgb(188, 214, 178) rgb(36, 72, 80) */
+
+/* rgb(163, 101, 0) rgb(187, 124, 145) rgb(65, 121, 53) rgb(180, 226, 130) rgb(178, 198, 130) */
+
+:root {
+    /*theme 1*/
+    --white: #ffffff;
+    --t1-c1: rgb(119, 116, 101);
+    --t1-c2: rgb(50, 162, 122);
+    --t1-c3: rgb(208, 176, 11);
+    --t1-c4: rgb(188, 214, 178);
+    --t1-c5: rgb(36, 72, 80);
+
+    /*theme 2*/
+    --black: #000000;
+    --t1-c1: rgb(180, 226, 130);
+    --t1-c3: rgb(29, 50, 24);
+    --t1-c4: rgb(215, 224, 193);
+    --t1-c5: rgb(163, 101, 0);
+}
 
 body {
-    background-color: rgb(36, 72, 80);
-    color: rgb(188, 214, 178);
+    background-color: var(--t1-c5);
+    color: var(--t1-c4);
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 10vh 20vw;
@@ -28,11 +47,11 @@ h1 {
 }
 
 p {
-    color: rgb(188, 214, 178);
+    color: var(--t1-c4);
 }
 
 .show-time {
-    color: rgb(188, 214, 178);
+    color: var(--t1-c4);
     font-size: 5em;
     margin-top: 5%;
 }
@@ -67,28 +86,29 @@ input {
     border: none;
     border-radius: 20px;
     box-shadow: 2px 4px 4px rgba(20, 12, 33, 0.49) inset;
-    color: rgb(36, 72, 80);
-    background-color: rgb(188, 214, 178);
+    color: var(--t1-c5);
+    background-color: var(--t1-c4);
 }
 
 .start {
-    background-color: rgb(208, 176, 11);
+    background-color: var(--t1-c3);
 }
 
 .start:hover {
-    background-color: rgb(50, 162, 122);
+    background-color: var(--t1-c1);
 }
 
 .stop {
-    background-color: rgb(50, 162, 122);
+    background-color: var(--t1-c1);
 }
 
 .stop:hover {
-    background-color: rgb(208, 176, 11);
+    background-color: var(--t1-c3);
 }
 
 button {
-    color: rgb(36, 72, 80);
+    background-color: var(--t1-c3);
+    color: var(--t1-c1);
     padding: 10px 20px;
     font-size: 16px;
     border: none;
