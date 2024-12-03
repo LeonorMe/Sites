@@ -1,0 +1,15 @@
+[
+    {
+        "id": 0, 
+        "title": "Daily German", 
+        "autor": "Leonor Medeiros", 
+        "date" : "2024",
+        "type": "Languages",
+        "desc": "German basics to daily interactions", 
+        "cover": "img/IMG20240918171537[1].jpg",
+        "cards": [
+            {"question": "Bitte", "awser": "Please"},
+            {"question": "Mit card", "awser": "With card"}
+        ]
+    }
+]

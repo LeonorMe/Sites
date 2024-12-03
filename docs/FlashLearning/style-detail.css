@@ -1,0 +1,30 @@
+:root {
+    /* theme 2*/
+    --t2-c1: rgb(236, 236, 211);
+    --t2-c2: rgb(134, 158, 13);
+    --t2-c3: rgb(31, 84, 13);
+    --t2-c4: rgba(31, 84, 13, 0.8);
+
+    /* def */
+    --background: var(--t2-c1);
+    --h1: var(--t2-c3);
+    --h2: var(--t2-c2);
+    --p: var(--t2-c1);
+    --img-shadow: var(--t2-c2);
+    --card: var(--t2-c4);
+}
+
+header {
+    margin-bottom: 2vw;
+}
+
+.theme-title {
+    color: var(--h2);
+}
+
+.card {
+    background-color: var(--card);
+    color: var(--p);
+    height: auto;
+    padding: 5% 10%;
+}
