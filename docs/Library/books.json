@@ -1,5 +1,27 @@
 [
     {
+        "id": 3, 
+        "title": "Poemas", 
+        "autor": "Leonor Medeiros", 
+        "date" : "2020",
+        "type": "Diary, History",
+        "desc": "", 
+        "cover": "img/Poemas.png", 
+        "backCover": "img/Poemas-back.png",
+        "pages": "text/Poemas.txt"
+    },
+    {
+        "id": 2, 
+        "title": "Diário de uma Quarentena", 
+        "autor": "Leonor Medeiros", 
+        "date" : "2020",
+        "type": "Diary, History",
+        "desc": "O que se passou? O que mudou?", 
+        "cover": "img/Diario_de_uma_Quarentena.png", 
+        "backCover": "img/Diario_de_uma_Quarentena-back.png",
+        "pages": "text/Diario_de_uma_Quarentena.txt"
+    },
+    {
         "id": 1, 
         "title": "A Ceia de Plástico", 
         "autor": "Leonor Medeiros", 
@@ -9,7 +31,7 @@
         "cover": "img/A_Ceia_de_Plastico.png", 
         "backCover": "img/A_Ceia_de_Plastico-back.png",
         "pages": "text/A_Ceia_de_Plastico.txt"
-        },
+    },
     {
         "id": 0, 
         "title": "O Roubo da Clarinha", 

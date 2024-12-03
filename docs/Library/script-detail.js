@@ -1,4 +1,4 @@
-const TOTALids = 2;
+const TOTALids = 4;
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("books.json")
