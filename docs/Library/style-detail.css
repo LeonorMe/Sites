@@ -76,7 +76,7 @@ article {
 }
 
 .pages-container {
-    background-color: var(--t1-c1);
+    background-color: var(--t1-c6);
     padding: 10% 0;
     margin-bottom: 10vh;
 }
@@ -86,7 +86,7 @@ article {
 }
 
 .col.blank {
-    background-color: var(--t1-c1);
+    background-color: var(--t1-c6);
     margin-bottom: 10vh;
 }
 
