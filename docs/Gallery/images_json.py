@@ -33,7 +33,7 @@ for image in os.listdir(directory):
     #exit(0)
     
     #name = input("Name: ")
-    name = 'photo_' + str(id) # TODO image name
+    name = 'image_' + str(id) # TODO image name
 
     #save
     file.write(json.dumps(
