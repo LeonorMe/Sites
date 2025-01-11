@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("images.json")
+    fetch("images_photo.json") // TODO images json
     .then((response) => response.json())
     .then((data) => {
         const projectsGallery = document.querySelector(".projects-container");

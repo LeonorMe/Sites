@@ -14,12 +14,12 @@ import matplotlib.image as mpimg
 import cv2 as cv
 import numpy as np
 
-
-file = open("docs\Gallery\images_new.json", "w") # a+ para adiconar conteudo sem eliminar
+# TODO nome do ficheiro de destino
+file = open("docs\Gallery\images_photo.json", "w") # a+ para adiconar conteudo sem eliminar
 file.write('[\n')
 
-directory = 'docs\Gallery\img'
-d = 'img'
+directory = 'docs\Gallery\photo' # TODO diretorio das imagens
+d = 'photo' # TODO images folder
 id = 0
 for image in os.listdir(directory):
     if(id != 0):
@@ -33,7 +33,7 @@ for image in os.listdir(directory):
     #exit(0)
     
     #name = input("Name: ")
-    name = 'image_' + str(id)
+    name = 'photo_' + str(id) # TODO image name
 
     #save
     file.write(json.dumps(

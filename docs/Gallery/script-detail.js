@@ -1,7 +1,7 @@
 const TOTALids = 40;
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("images.json")
+    fetch("images.json") // TODO images json file
     .then((response) => response.json())
     .then((images) => {
 
